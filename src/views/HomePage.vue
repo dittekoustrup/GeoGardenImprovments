@@ -24,6 +24,8 @@ const routes = router.getRoutes();
     <IntroSubscription 
       title="Velkommen til haven"
       body="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem exercitationem quaerat odio voluptate mollitia totam. Accusantium explicabo autem illo est dolor maxime culpa velit, temporibus cum id quam fugitomnis placeat! Numquam assumenda repudiandae distinctio sint nostrum, cum dicta! Eius quae architecto corporis numquam sed dolor voluptates velit doloribus cum harum voluptate doloremque dignissimos deserunt molestiae repellat, perferendis magni, veritatis quia officiis eligendi. Fuga harum esse numquam iste eaque id possimus, iure perspiciatis animi. Sunt iure nesciunt perferendis sequi."
+      buttonText="Læs mere"
+      buttonLink="dynamic button events here, ex. link to other page, or show toaster"
     />
 
   </main>
@@ -48,5 +50,3 @@ const routes = router.getRoutes();
 }
 
 </style>
-
-<!-- TODO: Make/move introsection into own component -->
