@@ -1,0 +1,16 @@
+// This scss document contains all the fonts, their sizes and adjustments used througout the project
+
+// Import fonts from assets/style/fonts folder
+@font-face {
+    font-family: "Stag Bold";
+    src: url("../fonts/Stag_Bold.ttf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Open Sans Regular";
+    src: url("../fonts/OpenSans_Condensed-Regular.ttf");
+    font-weight: normal;
+}
+
+// Mobil version
