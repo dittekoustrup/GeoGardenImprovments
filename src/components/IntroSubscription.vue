@@ -4,7 +4,13 @@ import { defineProps } from 'vue';
 const props = defineProps({
     title: String,
     body: String,
+    buttonText: String, 
+    buttonLink: String,
 });
+
+const handleClick = () => {
+  console.log(props.buttonLink);
+};
 
 </script>
 
@@ -17,8 +23,8 @@ const props = defineProps({
         <p>
           {{ body }}
         </p>
-        <button>
-          Læs mere
+        <button @click="handleClick">
+          {{ buttonText }}
         </button>
       </div>
 
