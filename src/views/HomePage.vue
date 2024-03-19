@@ -7,6 +7,7 @@ const routes = router.getRoutes();
 <template>
   <main>
     <menu>
+      hello
       <li v-for="r in routes" :key="r.path">
         <RouterLink :to="r.path">{{ r.meta.title }}</RouterLink>
       </li>
