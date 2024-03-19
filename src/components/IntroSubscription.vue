@@ -1,5 +1,5 @@
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps, defineComponent } from 'vue';
 
 const props = defineProps({
     title: String,
@@ -16,6 +16,7 @@ const handleClick = () => {
 
 <template>
      <section class="intro">
+        
       <div class="intro__content">
         <h2>
           {{ title }}
