@@ -1,5 +1,8 @@
 <script setup>
-import { defineProps } from 'vue';
+// "[@vue/compiler-sfc] `defineProps` is a compiler macro and no longer needs to be imported."
+// import { defineProps } from 'vue';
+
+import Button from '@/components/Button.vue';
 
 const props = defineProps({
     title: String,
@@ -12,11 +15,11 @@ const props = defineProps({
 </script>
 
 <template>
-    <section :class="{ 'card--alt': imageFirst }"   class="card">
+    <section :class="{ 'card--alt': imageFirst }" class="card">
         <div>
             <img :src="imageURL" :alt="category + ' image'">
         </div>
-        <div :class="{ 'card__content--alt': imageFirst }"  class="card__content">
+        <div :class="{ 'card__content--alt': imageFirst }" class="card__content">
             <h3>
                 {{ category}}
             </h3>
@@ -26,9 +29,9 @@ const props = defineProps({
             <p>
                 {{ body }}
             </p>
-            <button>
-                read more
-            </button>
+            <Button 
+                :text="buttonText"
+             />
         </div>
     </section>
 </template>
@@ -40,12 +43,12 @@ const props = defineProps({
     justify-content: center;
     align-items: center;
     background-color: deeppink;
-    
-    &__content {
-    height: 100%;
-    padding: 50px 100px;
 
-}
+    &__content {
+        height: 100%;
+        padding: 50px 100px;
+
+    }
 
     img {
         height: 756px;

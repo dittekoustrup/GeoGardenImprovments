@@ -1,6 +1,8 @@
 <script setup>
 import { defineProps, defineComponent } from 'vue';
 
+import Button from '@/components/Button.vue'
+
 const props = defineProps({
     title: String,
     body: String,
@@ -24,9 +26,10 @@ const handleClick = () => {
         <p>
           {{ body }}
         </p>
-        <button @click="handleClick">
-          {{ buttonText }}
-        </button>
+        
+        <Button
+        :text="buttonText"
+        />
       </div>
 
       <div class="intro__image">
