@@ -9,12 +9,40 @@ const router = createRouter({
       name: "home",
       component: HomePage,
     },
+
+    {
+      path: "/events",
+      name: "events",
+      component: () => import("../views/OutOfScope.vue"),
+      meta: {
+        title: "EVENTS",
+      },
+    },
+
+    {
+      path: "/haveblog",
+      name: "haveblog",
+      component: () => import("../views/OutOfScope.vue"),
+      meta: {
+        title: "HAVEBLOG",
+      },
+    },
+
+    {
+      path: "/priser-åbningstider",
+      name: "priser-åbningstider",
+      component: () => import("../views/OutOfScope.vue"),
+      meta: {
+        title: "PRISER / ÅBNINGSTIDER",
+      },
+    },
+
     {
       path: "/newsletter",
       name: "newsletter",
       component: () => import("../views/NewsLetter.vue"),
       meta: {
-        title: "Newsletter",
+        title: "KUNDEKLUB",
       },
     },
   ],
