@@ -201,6 +201,7 @@
 <style lang="scss">
 @use '../assets/style/global/_fonts.scss' as f;
 @use '../assets/style/global/_variables.scss' as v;
+@use '../assets/style/global/_colors.scss' as c;
 
 section {
     margin: 120px 0px;
@@ -229,9 +230,11 @@ section {
 h2 {
     font-family: f.$primary-font;
     font-size: f.$h2;
+    color: c.$black;
 
     @media screen and (min-width: v.$desktop-screen) {
         font-size: f.$h2-desktop;
+        color: c.$black;
     }
 }
 
@@ -239,11 +242,17 @@ p {
     font-family: f.$secondary-font;
     font-size: f.$body-text;
     line-height: f.$line-height-body;
+    color: c.$black;
 
     @media screen and (min-width: v.$desktop-screen) {
         font-size: f.$body-text-desktop;
+        color: c.$black;
 
     }
+}
+
+strong {
+    font-family: f.$primary-font;
 }
 
 img {
@@ -264,9 +273,11 @@ li {
     font-family: f.$secondary-font;
     font-size: f.$body-text;
     line-height: f.$line-height-body;
+    color: c.$black;
 
     @media screen and (min-width: v.$desktop-screen) {
         font-size: f.$body-text-desktop;
+        color: c.$black;
     }
 }
 </style>
