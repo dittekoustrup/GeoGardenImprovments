@@ -1,20 +1,22 @@
 <script setup>
+import { defineProps } from "vue";
+
+import getImageSize from '@/helpers/getImageSize';
+
 const props = defineProps({
-    imageURL: String,
-})
+    imageName: String
+});
+
 </script>
 
 <template>
     <div class="hero">
-        <img class="hero__image" :src="imageURL" alt="#">
+        <img class="hero__image" :src="getImageSize(imageName)" alt="Hero image">
     </div>
 </template>
 
 <style lang="scss" scoped>
 .hero {
-    // width: 1517px;
-    // height: 524px;
-    
     width: 100vw;
     height: 524px;
 
