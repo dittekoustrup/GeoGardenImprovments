@@ -251,10 +251,6 @@ p {
     }
 }
 
-strong {
-    font-family: f.$primary-font;
-}
-
 img {
     display: none;
 
