@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
 .navigation {
     background-color: #125F31;
     height: 66px;
@@ -14,6 +18,10 @@
     top: 0;
     position: relative;
     z-index: 10;
+
+    &__dropdown-menu {
+        display: none;
+    }
 
     &__desktop-layout {
         display: none;
@@ -81,6 +89,19 @@
 }
 
 @media screen and (min-width: 1024px) {
+    .desktop-dropdown {
+        &__arrow {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+
+            background-image: url(../icons/fuck.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+
     .navigation {
         padding: 35px;
         height: 92px;
@@ -89,13 +110,35 @@
             display: flex;
             gap: 5px;
             position: relative;
+            cursor: pointer;
 
             &--active {
                 position: absolute;
                 background-color: #FFFAE6;
-                height: 200px;
-                width: 40px;
+                color: #343434;
+                width: 213px;
                 top: 54px;
+                left: -41px;
+                padding-top: 19px;
+                padding-bottom: 64px;
+                font-size: 12px;
+
+                ul {
+                    li {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        height: 40px;
+                        padding-left: 43px;
+                        gap: 5px;
+
+                        &:hover {
+                            background-color: #7FA761;
+                            color: #ffffff;
+                            cursor: pointer;
+                        }
+                    }
+                }
             }
         }
 
@@ -115,16 +158,16 @@
             img {
                 width: 54px;
             }
-    
+
             p {
                 font-size: 20px;
             }
         }
-    
+
         &__burger {
             display: none;
         }
-    
+
         &__newsletter {
             height: 135px;
             width: 140px;
@@ -132,14 +175,14 @@
             padding-top: 39px;
             cursor: pointer;
         }
-    
+
         ul {
             padding: 0;
         }
-    
+
         li {
             list-style: none;
-    
+
             a {
                 color: #ffffff;
                 text-decoration: none;
@@ -147,5 +190,4 @@
             }
         }
     }
-  }
-  
+}
