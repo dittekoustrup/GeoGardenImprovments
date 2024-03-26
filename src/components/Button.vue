@@ -1,16 +1,21 @@
 <script setup>
 const props = defineProps({
     text: String,
+    color: String,
 });
 </script>
 
 <template>
     <div class="button">
         {{ text }}
+        {{ color }}
     </div>
 </template>
 
 <style lang="scss">
+// unused for now, but import when necessary
+@use '@/assets/style/global/variables' as v;
+
 .button {
     background-color: hotpink;
     width: 306px;
