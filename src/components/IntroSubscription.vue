@@ -8,6 +8,7 @@ const props = defineProps({
     body: String,
     buttonText: String, 
     buttonLink: String,
+    buttonColor: String,
 });
 
 const handleClick = () => {
@@ -29,6 +30,7 @@ const handleClick = () => {
         
         <Button
         :text="buttonText"
+        :color="buttonColor"
         />
       </div>
 

@@ -10,6 +10,7 @@ const props = defineProps({
     body: String,
     imageURL: String,
     imageFirst: Boolean,
+    buttonText: String,
 })
 
 </script>
