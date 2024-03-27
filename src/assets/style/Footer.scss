@@ -1,0 +1,202 @@
+footer {
+    margin-top: 200px;
+    background-color: #125F31;
+    padding: 40px 34px 16px 34px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &__logo {
+        background-image: url(../icons/LogoTextRow.svg);
+        display: block;
+        width: 306px;
+        height: 74px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        margin-bottom: 40px;
+    }
+
+    &__socials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+        margin-bottom: 57px;
+
+        h2 {
+            color: #D97B7B;
+            font-size: 25px;
+            font-weight: 700;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        gap: 25px;
+    }
+
+    &__contact {
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        margin-bottom: 64px;
+
+        h2 {
+            color: #D97B7B;
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        address {
+            font-style: normal;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0px;
+        }
+    }
+
+    &__links {
+        text-align: center;
+        margin-bottom: 40px;
+        color: white;
+        max-width: 400px;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    &__rights {
+        text-align: center;
+        font-size: 10px;
+        color: white;
+        font-weight: 600;
+    }
+
+    &__about-us {
+        display: none;
+    }
+
+    &__extra-and-socials {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    footer {
+        padding: 113px 0px 25px 0px;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 68px;
+        align-items: flex-start;
+        justify-content: center;
+        line-height: 30px;
+        gap: 74px;
+
+        &__logo {
+            background-image: url(../icons/LogoTextStacked.svg);
+            width: 166px;
+            height: 242px;
+            margin-bottom: 0px;
+            margin-right: 98px;
+        }
+
+        &__facebook-logo {
+            background-image: url(../icons/Facebook.svg);
+            display: block;
+            width: 57px;
+            height: 56px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    
+        &__instagram-logo {
+            background-image: url(../icons/Instagram.svg);
+            display: block;
+            width: 57px;
+            height: 56px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        &__about-us {
+            display: flex;
+            flex-direction: column;
+            color: white;
+
+            h2 {
+                margin-bottom: 25px;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+        }
+
+        &__extra-and-socials {
+            display: flex;
+            flex-direction: column;
+            color: white;
+
+            &--extras-header {
+                margin-bottom: 25px;
+            } 
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+            &--socials-header {
+                margin-top: 25px;
+                margin-bottom: 10px;
+            } 
+
+            &--logos {
+                display: flex;
+                gap: 25px;
+            }
+        }
+    
+        &__socials {
+            display: none;
+        }
+    
+        &__icons {
+        }
+    
+        &__contact {
+            margin-bottom: 0px;
+            text-align: start;
+    
+            h2 {
+                color: white;
+            }
+        }
+    
+        &__links {
+            display: none;
+        }
+    
+        &__rights {
+        }
+    }
+}
