@@ -7,8 +7,7 @@ const props = defineProps({
   title: String,
   body: String,
   buttonText: String,
-  buttonLink: String,
-  buttonColor: String,
+  buttonAlt: Boolean,
   imageURL: String,
 });
 
@@ -28,7 +27,7 @@ function getImageUrl(imageURL) {
         <p>
           {{ body }}
         </p>
-        <Button :text="buttonText" :color="buttonColor" />
+        <Button :text="buttonText" :buttonAlt="buttonAlt" />
       </div>
     </div>
 
