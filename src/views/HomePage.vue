@@ -25,8 +25,8 @@ const routes = router.getRoutes();
 
     <IntroSubscription title="Velkommen til haven"
       body="Geografisk Have Kolding er en 14 hektar stor, botanisk have, hvor det geografiske relaterer sig til, at træer, buske og urter er plantet sammen efter oprindelsesland. Grundlæggeren Aksel Olsen købte jorden og startede stedet som planteskole i 1918. Han havde en stor interesse for planter fra hele verden og især fra Østasien..."
-      buttonText="Læs mere" buttonLink="dynamic button events here, ex. link to other page, or show toaster"
-      buttonColor="light" imageURL="../assets/gfx/logo/Logo_icon_no_text.svg" />
+      buttonText="Læs mere"
+      :buttonAlt=true imageURL="../assets/gfx/logo/Logo_icon_no_text.svg" />
 
     <Card title="tilbud og rabatter" category="Eksklusive"
       body="Modtag særlige tilbud og rabatter på alt fra billetter og årskort til cafévarer og merchandise i vores butik. Modtag særlige tilbud og rabatter på alt fra billetter og årskort til cafévarer og merchandise i vores butik."
@@ -46,7 +46,9 @@ const routes = router.getRoutes();
 
     <IntroSubscription title="Bliv en del af klubben"
       body="Som medlem af vores kundeklub får du adgang til en verden af eksklusive fordele og særlige oplevelser i vores smukke have. Vores kundeklub er designet til at give vores trofaste gæster en ekstraordinær oplevelse, hvor I kan nyde alt det, haven har at byde på, samt få adgang til særlige rabatter og arrangementer."
-      buttonText="Bliv medlem" buttonLink="dynamic button events here, ex. link to other page, or show toaster" imageURL="../assets/images/mobile/Kundeklub_kort.webp" />
+      buttonText="Bliv medlem" imageURL="../assets/images/mobile/Kundeklub_kort.webp" 
+      :buttonAlt=true
+      />
 
   </main>
 </template>
