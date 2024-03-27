@@ -20,9 +20,8 @@ function getImageUrl(imageURL) {
 
 <template>
   <section class="intro">
-
-    <div>
-      <div class="intro__content">
+    <div class="intro__content-flex">
+      <div class="intro__content-container">
         <h2>
           {{ title }}
         </h2>
@@ -40,29 +39,42 @@ function getImageUrl(imageURL) {
 </template>
 
 <style lang="scss" scoped>
-.intro {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@use '../assets/style/global/mixins' as m;
 
-  & div {
-    flex-grow: 1;
-    width: 100%;
+.intro {
+  @include m.flex-center;
+
+  &__content-flex {
+    flex: 1;
   }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 170px;
+  &__content-container {
+    padding: 0 100px;
 
+    h2 {
+      @include m.font-size-h2;
+    }
+
+    p {
+      @include m.font-size-body;
+    }
   }
 
   &__image {
-    object-fit: cover;
-    width: 285px;
-    // background-color: crimson;
-  }
+    display: none;
 
+    @include m.desktop-size {
+      display: block;
+
+      @include m.flex-center;
+      flex: 1;
+
+      & img {
+        width: 285px;
+        height: auto;
+        object-fit: cover;
+      }
+    }
+  }
 }
 </style>

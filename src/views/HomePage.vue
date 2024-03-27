@@ -17,7 +17,6 @@ const routes = router.getRoutes();
       <li v-for="r in routes" :key="r.path">
         <RouterLink :to="r.path">{{ r.meta.title }}</RouterLink>
       </li>
-      <p>Test</p>
     </menu>
 
     <section>
@@ -51,12 +50,3 @@ const routes = router.getRoutes();
 
   </main>
 </template>
-
-<style lang="scss" scoped>
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-</style>
