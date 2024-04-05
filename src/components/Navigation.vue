@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import Dropdown from "./Dropdown.vue"
-import activateToast from "../helper/Toast.js"
+import activateToast from "../helpers/Toast.js"
 import DesktopNavigation from "./DesktopNavigation.vue"
 
 const router = useRouter();
@@ -22,12 +22,11 @@ const redirectToHomePage = () => {
     <nav>
         <ul class="navigation">
             <div class="navigation__logo" @click="redirectToHomePage">
-                <img src="../assets/icons/Logo.svg" alt="logo">
-                <p>Geografisk Have</p>
+                <img src="../assets/icons/LogoTextRow.svg" alt="logo">
             </div>
 
             <DesktopNavigation />
-            
+
             <li class="navigation__newsletter">
                 <RouterLink :to="newsletterRoute.path">{{ newsletterRoute.meta.title }}</RouterLink>
             </li>
