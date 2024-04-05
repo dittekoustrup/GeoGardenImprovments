@@ -1,15 +1,15 @@
 <template>
-  <div class="input-wrap" :class="{ active: modelValue !== '' }">
-    <label>{{ label }}</label>
+  <div class="input-wrap" :class="{ active: isFocused || modelValue !== '' }">
+    <label v-if="label && !isFocused">{{ label }}</label>
     <input
       type="text"
       :value="modelValue"
-      @input="updateModelValue"
-      @focus="isFocused = true"
+      @input="$emit('update:modelValue', $event.target.value)"
+      @focus="isFocused = false"
       @blur="isFocused = false"
-      :placeholder="isFocused ? '' : label"
+      :placeholder="label"
       v-bind="$attrs"
-      class="max-width-input my-input"
+      class="input-wrap__input max-width-input"
     />
   </div>
 </template>
@@ -17,47 +17,40 @@
 <script setup>
 import { ref } from "vue";
 
-const isFocused = ref(false);
-
 defineProps({
   label: {
     type: [String, Boolean],
-    default: false,
+    default: true,
   },
   modelValue: {
     type: String,
     default: "",
   },
 });
-
-function updateModelValue(event) {
-  $emit("update:modelValue", event.target.value);
-}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .input-wrap {
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid black;
   position: relative;
 
-  label {
+  &__label {
     font-size: 16px;
     color: black;
-    padding-bottom: 2px;
+    margin-bottom: 4px;
   }
 
-  input {
+  &__input {
     padding: 8px 0px;
     font-size: 16px;
     border: none;
     outline: none;
   }
 
-  &.active label,
-  .my-input:focus::placeholder {
-    display: none;
+  &.active .input-wrap__label {
+    display: block; // Viser label når input-wrap har klassen 'active'
   }
 
   .max-width-input {
@@ -66,8 +59,7 @@ function updateModelValue(event) {
 
   @media (min-width: 768px) {
     .max-width-input {
-      min-width: 360px;
-      padding-bottom: 1px;
+      min-width: 400px;
     }
   }
 }
