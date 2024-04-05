@@ -29,13 +29,14 @@
 
     button {
         font-family: f.$primary-font;
+        font-size: f.$button-text;
         padding: 10px;
         cursor: pointer;
         background-color: c.$secondary-green;
         color: c.$primary-offWhite;
         border-style: none;
         transition: 0.2s;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
 
         &:hover {
             transition: 0.2s;
