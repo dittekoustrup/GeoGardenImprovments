@@ -2,7 +2,7 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 import Dropdown from "./Dropdown.vue"
-import activateToast from "../helper/Toast.js"
+import activateToast from "../helpers/Toast.js"
 import DesktopNavigation from "./DesktopNavigation.vue"
 
 const router = useRouter();
@@ -27,7 +27,7 @@ const redirectToHomePage = () => {
             </div>
 
             <DesktopNavigation />
-            
+
             <li class="navigation__newsletter">
                 <RouterLink :to="newsletterRoute.path">{{ newsletterRoute.meta.title }}</RouterLink>
             </li>
