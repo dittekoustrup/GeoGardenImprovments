@@ -8,8 +8,12 @@
     <span v-for="error in v$.lastName.$errors" :key="error.$uid">
       {{ error.$message }}</span
     >
-    <BaseInput v-model="formData.email" type="email" label="Mail" />
-    <span v-for="error in v$.email.$errors" :key="error.$uid">
+    <BaseInput v-model="formData.email" type="email" label="Email" />
+    <span v-for="error in v$.email" :key="error.$uid">
+      {{ error.$message }}</span
+    >
+    <BaseInput v-model="formData.zipCode" type="number" label="Postnummer" />
+    <span v-for="error in v$.zipCode.$errors" :key="error.$uid">
       {{ error.$message }}</span
     >
     <button type="submit">Tilmeld</button>
