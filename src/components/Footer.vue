@@ -76,4 +76,4 @@ import { openNewTab } from '../helper/OpenInNewTab.js'
 
 <style>
 @import "../assets/style/Footer.scss";
-</style>
+</style>../helpers/OpenInNewTab.js
