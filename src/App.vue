@@ -1,10 +1,23 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
-import { useRoute, useRouter } from "vue-router";
-const router = useRouter();
-const routes = router.getRoutes();
+import { RouterView } from "vue-router";
+import Navigation from './components/Navigation.vue'
+import Footer from './components/Footer.vue'
 </script>
 
 <template>
+  <Navigation />
   <RouterView />
+  <Footer />
 </template>
+
+<style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+section {
+  gap: 120px;
+}
+</style>
