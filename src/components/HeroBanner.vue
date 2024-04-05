@@ -1,5 +1,4 @@
 <script setup>
-
 import getImageSize from '@/helpers/getImageSize';
 
 const props = defineProps({
