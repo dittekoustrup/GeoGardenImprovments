@@ -45,6 +45,14 @@ const router = createRouter({
         title: "KUNDEKLUB",
       },
     },
+    {
+      path: "/gdpr",
+      name: "gdpr",
+      component: () => import("../views/GdprPage.vue"),
+      meta: {
+        title: "GDPR",
+      },
+    },
   ],
 });
 
