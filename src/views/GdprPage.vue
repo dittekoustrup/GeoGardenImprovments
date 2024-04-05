@@ -1,7 +1,11 @@
+<script setup>
+import HeroBanner from "@/components/HeroBanner.vue";
+</script>
+
 <template>
     <div>
         <div>
-            <!-- TODO: Insert image when Kasper has uploaded the helper function -->
+            <HeroBanner height="300" imageName="gdpr_top_image.webp" />
         </div>
         <section class="content-section">
             <div class="content">
@@ -193,18 +197,22 @@
             </div>
         </section>
         <div>
-            <!-- TODO: Insert image when Kasper has uploaded the helper function -->
+            <HeroBanner height="300" imageName="gdpr_bottom_image.webp" />
         </div>
     </div>
 </template>
 
-<style lang="scss">
+<style scoped lang="scss">
 @use '../assets/style/global/_fonts.scss' as f;
 @use '../assets/style/global/_variables.scss' as v;
 @use '../assets/style/global/_colors.scss' as c;
 
 section {
-    margin: 120px 0px;
+    margin: v.$section-gap;
+
+    @media screen and (min-width: v.$desktop-screen) {
+        margin: v.$section-gap-desktop;
+    }
 }
 
 .content-section {
