@@ -78,6 +78,4 @@ import { openNewTab } from '../helpers/OpenInNewTab.js'
     </footer>
 </template>
 
-<style>
-@import "../assets/style/Footer.scss";
-</style>../helpers/OpenInNewTab.js
+<style>@import "../assets/style/Footer.scss";</style>../helpers/OpenInNewTab.js

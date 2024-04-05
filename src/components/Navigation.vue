@@ -22,8 +22,7 @@ const redirectToHomePage = () => {
     <nav>
         <ul class="navigation">
             <div class="navigation__logo" @click="redirectToHomePage">
-                <img src="../assets/icons/Logo.svg" alt="logo">
-                <p>Geografisk Have</p>
+                <img src="../assets/icons/LogoTextRow.svg" alt="logo">
             </div>
 
             <DesktopNavigation />

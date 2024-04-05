@@ -32,7 +32,7 @@ const hideAllDropdowns = () => {
     <div class="navigation__desktop-layout">
 
         <li class="navigation__dropdown-menu" @mouseenter="showDropdown(0)" @click="hideDropdown(0)">
-            <p>OPLEV HAVEN</p>
+            <p>OPLEVHAVEN</p>
             <img :class="{ 'rotate-180': dropdownVisibility[0] }" src="../assets/icons/DownArrowWhite.svg" alt="down arrow">
             <DesktopDropdown v-if="dropdownVisibility[0]" @mouseleave="hideDropdown(0)" />
         </li>
