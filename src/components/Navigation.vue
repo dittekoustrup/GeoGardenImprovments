@@ -55,4 +55,4 @@ const redirectToHomePage = () => {
 
 <style lang="scss">
 @import "../assets/style/Navigation.scss";
-</style>
+</style>../helpers/Toast.js
