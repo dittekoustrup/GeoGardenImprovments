@@ -1,5 +1,6 @@
 <script setup>
 import LoginForm from '../components/LoginForm.vue';
+import AdminNavigation from '@/components/AdminNavigation.vue';
 import { onSignOut, stateChange } from '../services/authService';
 import { ref } from 'vue';
 
@@ -15,5 +16,8 @@ console.log(user);
 
 <template>
     <LoginForm v-if="!user" />
-    <button @click="onSignOut" v-else>Sign Out</button>
+
+    <div v-else>
+        <AdminNavigation />
+    </div>
 </template>
