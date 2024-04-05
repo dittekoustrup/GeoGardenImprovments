@@ -1,14 +1,14 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-}
+@use "./global/colors" as c;
+@use "./global/variables" as v;
+@use "./global/fonts" as f;
 
 .rotate-180 {
     transform: rotate(180deg);
 }
 
 .navigation {
-    background-color: #125F31;
+    font-family: f.$primary-font;
+    background-color: c.$primary-green;
     height: 66px;
     display: flex;
     align-items: center;
@@ -36,7 +36,11 @@
 
         p {
             font-size: 12px;
-            color: #ffffff;
+            color: c.$white;
+        }
+
+        img {
+            width: 137px;
         }
     }
 
@@ -61,7 +65,7 @@
     }
 
     &__newsletter {
-        background-color: #D97B7B;
+        background-color: c.$secondary-pink;
         height: 84px;
         width: 92px;
         display: flex;
@@ -81,7 +85,7 @@
         list-style: none;
 
         a {
-            color: #ffffff;
+            color: c.$white;
             text-decoration: none;
             font-size: 12px;
         }
@@ -114,8 +118,8 @@
 
             &--active {
                 position: absolute;
-                background-color: #FFFAE6;
-                color: #343434;
+                background-color: c.$primary-offWhite;
+                color: c.$black;
                 width: 213px;
                 top: 54px;
                 left: -41px;
@@ -133,8 +137,8 @@
                         gap: 5px;
 
                         &:hover {
-                            background-color: #7FA761;
-                            color: #ffffff;
+                            background-color: c.$secondary-green;
+                            color: c.$white;
                             cursor: pointer;
                         }
                     }
@@ -146,9 +150,9 @@
             display: flex;
             gap: 30px;
             font-size: 14px;
-            color: white;
+            color: c.$white;
             margin-left: auto;
-            margin-right: 200px;
+            margin-right: 185px;
         }
 
         &__logo {
@@ -156,7 +160,7 @@
             margin: 0px;
 
             img {
-                width: 54px;
+                width: 200px;
             }
 
             p {
@@ -184,7 +188,7 @@
             list-style: none;
 
             a {
-                color: #ffffff;
+                color: c.$white;
                 text-decoration: none;
                 font-size: 14px;
             }
