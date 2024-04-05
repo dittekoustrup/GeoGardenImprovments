@@ -1,7 +1,6 @@
 <script setup>
-import { ref, watch } from "vue";
-import { useRoute, useRouter } from "vue-router";
-import activateToast from "../helper/Toast.js"
+import { ref } from "vue";
+import { useRouter } from "vue-router";
 import DesktopDropdown from "./DesktopDropdown.vue";
 
 const router = useRouter();

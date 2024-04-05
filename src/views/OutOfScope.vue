@@ -1,4 +1,8 @@
 <script setup>
 </script>
 
-<template></template>
+<template>
+    <div>
+        Out of Scope
+    </div>
+</template>
