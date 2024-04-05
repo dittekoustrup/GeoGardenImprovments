@@ -53,6 +53,14 @@ const router = createRouter({
         title: "GDPR",
       },
     },
+    {
+      path: "/admin-login",
+      name: "admin-login",
+      component: () => import("../views/AdminView.vue"),
+      meta: {
+        title: "admin-login",
+      },
+    },
   ],
 });
 

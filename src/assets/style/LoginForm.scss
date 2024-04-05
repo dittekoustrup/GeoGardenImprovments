@@ -1,0 +1,46 @@
+@use '../style/global/fonts' as f;
+@use '../style/global/_variables.scss' as v;
+@use '../style/global/_colors.scss' as c;
+
+.login-form-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: c.$grey;
+}
+
+.login-form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: c.$black;
+    padding: 10px;
+    border-radius: 5px;
+
+    input {
+        padding: 5px;
+        border-style: none;
+        height: 30px;
+        border-radius: 5px;
+        width: 300px;
+    }
+
+    button {
+        font-family: f.$primary-font;
+        padding: 10px;
+        cursor: pointer;
+        background-color: c.$secondary-green;
+        color: c.$primary-offWhite;
+        border-style: none;
+        transition: 0.2s;
+        letter-spacing: 1px;
+
+        &:hover {
+            transition: 0.2s;
+            color: c.$black;
+            background-color: c.$primary-offWhite;
+        }
+    }
+}
