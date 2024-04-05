@@ -1,5 +1,4 @@
 <script setup>
-// "[@vue/compiler-sfc] `defineProps` is a compiler macro and no longer needs to be imported."
 // import { defineProps } from 'vue';
 
 import Button from '@/components/Button.vue';
