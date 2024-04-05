@@ -1,5 +1,4 @@
 <script setup>
-import { defineProps, defineComponent } from 'vue';
 
 import Button from '@/components/Button.vue'
 
