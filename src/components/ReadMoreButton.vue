@@ -38,8 +38,7 @@ const props = defineProps({
     &:active {
         background-color: yellow;
     }
-
-    // TODO: disabled is styled, but not integrated yet
+ 
     &:disabled {
         opacity: 30%;
     }
