@@ -1,0 +1,38 @@
+.dropdown {
+    background-color: #FFFAE6;
+    position: absolute;
+    width: 100%;
+
+    &__expand {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        img {
+            padding-bottom: 4px;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 33px 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 27px;
+
+        li {
+            font-size: 12px;
+        
+            a {
+                text-decoration: none;
+                color: #000000;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .dropdown {
+        display: none;
+    }
+}
