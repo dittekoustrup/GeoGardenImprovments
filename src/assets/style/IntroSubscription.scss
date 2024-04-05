@@ -1,4 +1,5 @@
 @use './global/mixins' as m;
+@use './global/colors' as c;
 
 .intro {
   @include m.flex-center;
@@ -9,7 +10,7 @@
 
   &__content-container {
     padding: 0 100px;
-
+    
     h2 {
       @include m.font-size-h2;
     }

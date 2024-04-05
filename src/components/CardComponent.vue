@@ -39,48 +39,5 @@ const props = defineProps({
 </template>
 
 <style lang="scss" scoped>
-// @use '@/assets/style/global/variables' as v;
-@use '@/assets/style/global/fonts' as f;
-@use '@/assets/style/global/colors' as c;
-
-.card {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-    background-color: c.$secondary-green;
-
-    div {
-        flex-grow: 1;
-        width: 100%;
-    }
-
-    h2 {
-        font-size: f.$h2;
-    }
-
-    h3 {
-        font-size: 24px;
-        // TODO: talk about adding h3, is not part of design system
-    }
-
-    p {
-        font-size: f.$body-text;
-    }
-
-    &__content div {
-        padding: 50px 100px;
-        font-size: f.$body-text;
-    }
-
-    img {
-        width: 100%;
-        object-fit: cover;
-    }
-}
-
-.card--alt {
-    flex-direction: row;
-    background-color: c.$primary-green;
-}
+@import '@/assets/style/CardComponent';
 </style>

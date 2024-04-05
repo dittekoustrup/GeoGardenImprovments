@@ -1,0 +1,42 @@
+@use './global/fonts' as f;
+@use './global/colors' as c;
+@use './global/mixins' as m;
+
+.card {
+    @include m.flex-center;
+    background-color: c.$secondary-green;
+    color: c.$primary-offWhite;
+
+    div {
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    h2 {
+        @include m.font-size-h2;
+    }
+
+    h3 {
+        font-size: 24px;
+        // TODO: talk about adding h3, is not part of design system
+    }
+
+    p {
+        @include m.font-size-body;
+    }
+
+    &__content div {
+        padding: 50px 100px;
+        @include m.font-size-body;
+    }
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.card--alt {
+    flex-direction: row;
+    background-color: c.$primary-green;
+}
