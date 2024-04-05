@@ -1,6 +1,6 @@
 <script setup>
 
-import Button from '@/components/Button.vue'
+import ReadMoreButton from '@/components/ReadMoreButton.vue'
 
 const props = defineProps({
   title: String,
@@ -26,7 +26,7 @@ function getImageUrl(imageURL) {
         <p>
           {{ body }}
         </p>
-        <Button :text="buttonText" :buttonAlt="buttonAlt" />
+        <ReadMoreButton :text="buttonText" :buttonAlt="buttonAlt" />
       </div>
     </div>
 

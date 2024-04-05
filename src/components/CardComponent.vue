@@ -1,7 +1,6 @@
 <script setup>
-// import { defineProps } from 'vue';
 
-import Button from '@/components/Button.vue';
+import ReadMoreButton from '@/components/ReadMoreButton.vue';
 
 import getImageUrl from '@/helpers/getImageSize';
 
@@ -33,7 +32,7 @@ const props = defineProps({
                 <p>
                     {{ body }}
                 </p>
-                <Button :text="buttonText" />
+                <ReadMoreButton :text="buttonText" />
             </div>
         </div>
     </section>

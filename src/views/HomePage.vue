@@ -3,9 +3,9 @@
 import { useRouter } from "vue-router";
 
 // Components
-import Hero from "@/components/Hero.vue";
+import HeroBanner from "@/components/HeroBanner.vue";
 import IntroSubscription from '@/components/IntroSubscription.vue'
-import Card from '@/components/Card.vue'
+import CardComponent from '@/components/CardComponent.vue'
 
 const router = useRouter();
 const routes = router.getRoutes();
@@ -20,7 +20,7 @@ const routes = router.getRoutes();
     </menu>
 
     <section>
-      <Hero imageName="Geo_Have_06.webp" />
+      <HeroBanner imageName="Geo_Have_06.webp" />
     </section>
 
     <IntroSubscription title="Velkommen til haven"
@@ -28,19 +28,19 @@ const routes = router.getRoutes();
       buttonText="Læs mere"
       :buttonAlt=true imageURL="../assets/gfx/logo/Logo_icon_no_text.svg" />
 
-    <Card title="tilbud og rabatter" category="Eksklusive"
+    <CardComponent title="tilbud og rabatter" category="Eksklusive"
       body="Modtag særlige tilbud og rabatter på alt fra billetter og årskort til cafévarer og merchandise i vores butik. Modtag særlige tilbud og rabatter på alt fra billetter og årskort til cafévarer og merchandise i vores butik."
       imageName="Geo_Have_05.webp" buttonText="Læs mere" :imageFirst=true />
 
-    <Card title="begivenheder" category="Kommende"
+    <CardComponent title="begivenheder" category="Kommende"
       body="I Geografisk Have holder vi mange spændende events og aktiviteter hele året rundt. Herunder Grøn Have Festival, Plantemarked, Bæredygtigt Julemarked, Sankt Hans og mange flere..."
       imageName="Geo_Have_03.webp" buttonText="Læs mere" :imageFirst=false />
 
-    <Card title="havens dyr" category="Besøg"
+    <CardComponent title="havens dyr" category="Besøg"
       body="I Geografisk Have har vi forskellige dyr, du kan komme helt tæt på. Kom og hils på havens klappegeder, høns, klippeegern, ponyer og kaniner. Læs mere om hvilke spændende dyr, du kan opleve i dyrefolden..."
       imageName="Geo_Have_01.webp" buttonText="Læs mere" :imageFirst=true />
 
-    <Card title="festen i haven" category="Hold"
+    <CardComponent title="festen i haven" category="Hold"
       body="Lad Geografisk Have danne en stemningsfuld og eventyrlig ramme for dit næste arrangement. Haven er et helt unikt sted at holde bryllup, konfirmation, barnedåb og fødselsdag i inspirerende og skønne..."
       imageName="Geo_Have_04.webp" buttonText="Læs mere" :imageFirst=false />
 
