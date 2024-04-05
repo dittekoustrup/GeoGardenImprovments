@@ -1,0 +1,42 @@
+@use "./global/mixins" as m;
+@use "./global/colors" as c;
+
+.button {
+	@include m.flex-center;
+
+	margin-top: 20px;
+	background-color: c.$primary-offWhite;
+	color: c.$primary-brown;
+	width: 306px;
+	height: 64px;
+	font-weight: 700;
+
+    &:hover {
+        background-color: c.$primary-green;
+        color: c.$primary-offWhite;
+        border: 1px solid c.$primary-offWhite;
+    }
+    &:active {
+        background-color: c.$secondary-green;
+        color: c.$primary-offWhite;
+    }
+
+	&--alt {
+		background-color: c.$secondary-green;
+		color: c.$primary-offWhite;
+
+        &:hover {
+            background-color: c.$primary-green;
+        }
+        &:active {
+            background-color: c.$primary-offWhite;
+            color: c.$primary-green;
+            border: 1px solid c.$primary-green;
+        }
+	}
+    
+   
+	&:disabled {
+		opacity: 30%;
+	}
+}

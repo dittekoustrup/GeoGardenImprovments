@@ -37,42 +37,5 @@ function getImageUrl(imageURL) {
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/style/global/mixins' as m;
-
-.intro {
-  @include m.flex-center;
-
-  &__content-flex {
-    flex: 1;
-  }
-
-  &__content-container {
-    padding: 0 100px;
-
-    h2 {
-      @include m.font-size-h2;
-    }
-
-    p {
-      @include m.font-size-body;
-    }
-  }
-
-  &__image {
-    display: none;
-
-    @include m.desktop-size {
-      display: block;
-
-      @include m.flex-center;
-      flex: 1;
-
-      & img {
-        width: 285px;
-        height: auto;
-        object-fit: cover;
-      }
-    }
-  }
-}
+@import '../assets/style/IntroSubscription.scss'
 </style>

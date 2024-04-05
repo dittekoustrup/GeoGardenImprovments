@@ -1,39 +1,43 @@
-@use './global/mixins' as m;
-@use './global/colors' as c;
+@use "./global/mixins" as m;
 
 .intro {
-  @include m.flex-center;
+	@include m.flex-center;
 
-  &__content-flex {
-    flex: 1;
-  }
+	padding: 60px 46px;
+	text-align: center;
 
-  &__content-container {
-    padding: 0 100px;
-    
-    h2 {
-      @include m.font-size-h2;
-    }
+	h2 {
+		@include m.font-size-h2;
+		margin-bottom: 5px;
+	}
 
-    p {
-      @include m.font-size-body;
-    }
-  }
+	p {
+		@include m.font-size-body;
+	}
 
-  &__image {
-    display: none;
+	@include m.desktop-size {
+		&__content-flex {
+			flex: 1;
+		}
 
-    @include m.desktop-size {
-      display: block;
+		&__content-container {
+			padding: 0 100px;
+		}
+	}
 
-      @include m.flex-center;
-      flex: 1;
+	&__image {
+		display: none;
 
-      & img {
-        width: 285px;
-        height: auto;
-        object-fit: cover;
-      }
-    }
-  }
+		@include m.desktop-size {
+			display: block;
+
+			@include m.flex-center;
+			flex: 1;
+
+			& img {
+				height: auto;
+				object-fit: cover;
+			}
+		}
+	}
 }

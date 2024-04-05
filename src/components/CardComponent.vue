@@ -12,17 +12,14 @@ const props = defineProps({
     imageFirst: Boolean,
     buttonText: String,
 })
-
 </script>
 
 <template>
     <section :class="{ 'card--alt': imageFirst }" class="card">
-        <div>
-            <img :src="getImageUrl(imageName)" :alt="category + ' image'">
-        </div>
+        <img :src="getImageUrl(imageName)" :alt="category + ' image'">
 
         <div :class="{ 'card__content--alt': imageFirst }" class="card__content">
-            <div>
+            <div class="card__content-spacing">
                 <h3>
                     {{ category}}
                 </h3>

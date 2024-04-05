@@ -1,42 +1,79 @@
-@use './global/fonts' as f;
-@use './global/colors' as c;
-@use './global/mixins' as m;
+@use "./global/fonts" as f;
+@use "./global/colors" as c;
+@use "./global/mixins" as m;
 
 .card {
-    @include m.flex-center;
-    background-color: c.$secondary-green;
-    color: c.$primary-offWhite;
+	background-color: c.$secondary-green;
+	color: c.$primary-offWhite;
 
-    div {
-        flex-grow: 1;
-        width: 100%;
-    }
+	&__content {
+		text-align: center;
+		&-spacing {
+            @include m.flex-center($gap: 0);
+            flex-direction: column;
+			padding: 60px 46px;
+		}
+	}
 
-    h2 {
-        @include m.font-size-h2;
-    }
-
-    h3 {
-        font-size: 24px;
-        // TODO: talk about adding h3, is not part of design system
-    }
+	& h2,
+	h3 {
+		@include m.font-size-h2;
+	}
 
     p {
-        @include m.font-size-body;
-    }
-
-    &__content div {
-        padding: 50px 100px;
-        @include m.font-size-body;
+        margin: 20px 0 30px 0;
     }
 
     img {
-        width: 100%;
-        object-fit: cover;
+        width: 430px;
+        height: 230px;
     }
+
+	@include m.desktop-size {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row-reverse;
+        
+		h3,
+		h2,
+		p {
+			width: 100%;
+		}
+
+		h2 {
+			@include m.font-size-h2;
+		}
+
+		h3 {
+			font-size: 24px;
+			// TODO: talk about adding h3, is not part of design system
+		}
+
+		p {
+			@include m.font-size-body;
+		}
+
+		&__content {
+			flex: 1;
+			font-size: f.$body-text;
+		}
+
+		&__content-spacing {
+			padding: 0 100px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		img {
+			flex: 1;
+			height: 390px;
+			object-fit: cover;
+		}
+	}
 }
 
 .card--alt {
-    flex-direction: row;
-    background-color: c.$primary-green;
+	flex-direction: row;
+	background-color: c.$primary-green;
 }
