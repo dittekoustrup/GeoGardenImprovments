@@ -5,7 +5,7 @@
 .card {
 	background-color: c.$secondary-green;
 	color: c.$primary-offWhite;
-
+	
 	&__content {
 		text-align: center;
 		&-spacing {
@@ -15,6 +15,16 @@
 		}
 	}
 
+	@include m.desktop-size {
+		&__content {
+			text-align: left;
+			&-spacing {
+				align-items: start;
+				gap: 0;
+			}
+		}
+	};
+
 	& h2,
 	h3 {
 		@include m.font-size-h2;
@@ -22,11 +32,17 @@
 
     p {
         margin: 20px 0 30px 0;
+		@include m.desktop-size {
+			margin: 10px 0;
+		};
     }
 
     img {
-        width: 430px;
+        width: 100%;
         height: 230px;
+		@include m.desktop-size {
+			width: 430px;
+		};
     }
 
 	@include m.desktop-size {

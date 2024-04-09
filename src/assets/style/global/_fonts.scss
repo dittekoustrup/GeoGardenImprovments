@@ -2,16 +2,25 @@
 
 // Import fonts from assets/style/fonts folder
 @font-face {
-    font-family: "Stag Bold";
-    src: url("./src/assets/style/fonts/Stag_Bold.ttf") format("truetype");
-  }
-  
-  @font-face {
-    font-family: "Open Sans Regular";
-    src: url("./src/assets/style/fonts/OpenSans_Condensed-Regular.ttf") format("truetype");
-  }
+	font-family: "Stag Bold";
+	src: url("./src/assets/style/fonts/Stag_Bold.ttf") format("truetype");
+}
 
-$primary-font: "Stag Bold", serif;
+@font-face {
+	font-family: "Alfa Slab";
+	src: url("./src/assets/style/fonts/AlfaSlabOne-Regular.ttf")
+		format("truetype");
+}
+
+// TODO: add fallback font
+
+@font-face {
+	font-family: "Open Sans Regular";
+	src: url("./src/assets/style/fonts/OpenSans_Condensed-Regular.ttf")
+		format("truetype");
+}
+
+$primary-font: "Alfa Slab", serif;
 $secondary-font: "Open Sans Regular", sans-serif;
 
 $button-text: 18px;
