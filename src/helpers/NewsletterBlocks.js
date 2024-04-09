@@ -16,42 +16,57 @@ const blocks = [
     },
 
     {
-        id: 'websiteLink',
-        label: 'Website Link',
-        content: '<a href="http://localhost:5173/" data-gjs-type="text" style="text-decoration: none; color: black; font-weight: 700;">WEBSITE</a>',
+        id: 'navLinks',
+        label: 'Navigation Links',
+        content: `
+            <div class="links-container" >
+                <a href="http://localhost:5173/gdpr" data-gjs-type="text" style="text-decoration: none; color: inherit;">WEBSITE</a>
+                <a href="http://localhost:5173/gdpr" data-gjs-type="text" style="text-decoration: none; color: inherit;">ÅBNINGSTIDER</a>
+                <a href="http://localhost:5173/gdpr" data-gjs-type="text" style="text-decoration: none; color: inherit;">EVENTS</a>
+                <a href="http://localhost:5173/gdpr" data-gjs-type="text" style="text-decoration: none; color: inherit;">BLOG</a>
+            </div>
+        `,
     },
 
     {
-        id: 'openingHoursLink',
-        label: 'Åbningstider Link',
-        content: '<a href="http://localhost:5173/gdpr" data-gjs-type="text" style="text-decoration: none; color: black; font-weight: 700;">ÅBNINGSTIDER</a>',
+        id: 'imageAndTextSection',
+        label: 'Image and Text Section',
+        content: `
+            <section class="image-text-section">
+                <div class="image-container">
+                    <img src="https://i.imgur.com/qspKNqi.png" alt="Image">
+                </div>
+                <div class="text-container">
+                    <h3>Subtitle</h3>
+                    <h2>Title</h2>
+                    <p>Description</p>
+                    <a href="#" class="btn">Læs Mere</a>
+                </div>
+            </section>
+        `,
     },
 
     {
-        id: 'eventsLink',
-        label: 'Events Link',
-        content: '<a href="http://localhost:5173/gdpr" data-gjs-type="text" style="text-decoration: none; color: black; font-weight: 700;">EVENTS</a>',
+        id: 'devider',
+        label: 'Devider',
+        content: '<hr/>',
     },
-
-    {
-        id: 'blogLink',
-        label: 'Blog Link',
-        content: '<a href="http://localhost:5173/gdpr" data-gjs-type="text" style="text-decoration: none; color: black; font-weight: 700;">BLOG</a>',
-    },
-
-
 
     {
         id: 'image',
         label: 'Image',
         // Select the component once it's dropped
-        select: true,
+        // select: true,
         // You can pass components as a JSON instead of a simple HTML string,
         // in this case we also use a defined component type `image`
-        content: { type: 'image' },
+        content: {
+            type: 'image',
+            src: 'https://i.imgur.com/qspKNqi.png',
+            alt: 'GeoGraden logo',
+        },
         // This triggers `active` event on dropped components and the `image`
         // reacts by opening the AssetManager 
-        activate: true,
+        // activate: true,
     }
 ]
 

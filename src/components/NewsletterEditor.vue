@@ -1,6 +1,6 @@
 
 <script setup>
-import { onMounted, onBeforeUnmount, ref, watch } from 'vue';
+import { onMounted, onBeforeUnmount, ref } from 'vue';
 import grapesjs from 'grapesjs';
 import blocks from '../helpers/NewsletterBlocks.js'
 import axios from 'axios';
@@ -39,13 +39,13 @@ function exportNewsletter() {
 
 
 async function sendEmail() {
-    // const emailContent = editor.value.getHtml();
+    const emailContent = editor.value.getHtml();
 
     try {
         const response = await axios.post('https://sendemail-lfxkyrqqea-uc.a.run.app', {
             to: 'skp2104@hotmail.com',
             subject: 'Test Email',
-            html: '<h1>FUCK DIG GOOGLE</h1>'
+            html: emailContent
         });
         console.log(response.data);
         // Handle success
