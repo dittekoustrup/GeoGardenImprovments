@@ -11,8 +11,10 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "firebase": "^10.10.0",
+    "axios": "^1.6.8",
+    "firebase": "^10.6.0",
     "grapesjs": "^0.21.10",
+    "nodemailer": "^6.9.13",
     "pinia": "^2.1.7",
     "sass": "^1.72.0",
     "vue": "^3.4.21",

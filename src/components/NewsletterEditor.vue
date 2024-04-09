@@ -3,7 +3,7 @@
 import { onMounted, onBeforeUnmount, ref, watch } from 'vue';
 import grapesjs from 'grapesjs';
 import blocks from '../helpers/NewsletterBlocks.js'
-
+import axios from 'axios';
 const editor = ref(null);
 
 onMounted(() => {
@@ -35,9 +35,31 @@ function exportNewsletter() {
     // const inlineHtmlContent = inlineCSS(htmlContent)
     console.log(htmlContent);
 }
+
+
+
+async function sendEmail() {
+    // const emailContent = editor.value.getHtml();
+
+    try {
+        const response = await axios.post('https://sendemail-lfxkyrqqea-uc.a.run.app', {
+            to: 'skp2104@hotmail.com',
+            subject: 'Test Email',
+            html: '<h1>FUCK DIG GOOGLE</h1>'
+        });
+        console.log(response.data);
+        // Handle success
+        // For example, show a success message to the user
+    } catch (error) {
+        console.error(error);
+        // Handle error
+        // For example, show an error message to the user
+    }
+}
 </script>
 
 <template>
+    <button @click="sendEmail">Send Email</button>
     <button @click="exportNewsletter()">Export</button>
     <div ref="editor"></div>
     <div id="blocks"></div>
