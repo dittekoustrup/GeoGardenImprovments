@@ -5,7 +5,6 @@ const props = defineProps({
     imageName: String,
     height: Number
 });
-
 </script>
 
 <template>
@@ -15,9 +14,14 @@ const props = defineProps({
 </template>
 
 <style lang="scss" scoped>
+@use '../assets/style/global/mixins' as m;
+
 .hero {
     width: 100vw;
-    // height: 524px;
+    height: 165px;
+    @include m.desktop-size{
+        height: auto;
+    };
 
     &__image {
         width: 100%;
