@@ -2,7 +2,9 @@
 
 .intro {
 	@include m.flex-center;
+	flex-direction: column-reverse;
 	text-align: center;
+	padding-top: 20px;
 
 	h2 {
 		@include m.font-size-h2;
@@ -17,10 +19,12 @@
 		@include m.flex-center;
 		flex-direction: column;
 		gap: 0;
-		padding: 50px 0;
+		padding: 0 0 50px 0;
 	}
 
 	@include m.desktop-size {
+		@include m.desktop-size;
+		flex-direction: row;
 		text-align: left;
 		&__content-flex {
 			flex: 1;
@@ -32,8 +36,7 @@
 	}
 
 	&__image {
-		display: none;
-
+		
 		@include m.desktop-size {
 			display: block;
 
