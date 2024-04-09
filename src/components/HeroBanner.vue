@@ -2,13 +2,14 @@
 import getImageSize from '@/helpers/getImageSize';
 
 const props = defineProps({
-    imageName: String
+    imageName: String,
+    height: Number
 });
 
 </script>
 
 <template>
-    <div class="hero">
+    <div :style="{ height: props.height + 'px' }" class="hero">
         <img class="hero__image" :src="getImageSize(imageName)" alt="Hero image">
     </div>
 </template>
@@ -16,7 +17,7 @@ const props = defineProps({
 <style lang="scss" scoped>
 .hero {
     width: 100vw;
-    height: 524px;
+    // height: 524px;
 
     &__image {
         width: 100%;

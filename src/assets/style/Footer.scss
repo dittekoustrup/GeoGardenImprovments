@@ -1,6 +1,10 @@
+@use "./global/colors" as c;
+@use "./global/variables" as v;
+@use "./global/fonts" as f;
+
 footer {
-    margin-top: 200px;
-    background-color: #125F31;
+    font-family: f.$primary-font;
+    background-color: c.$primary-green;
     padding: 40px 34px 16px 34px;
 }
 
@@ -8,7 +12,7 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     &__logo {
         background-image: url(../icons/LogoTextRow.svg);
         display: block;
@@ -29,7 +33,7 @@ footer {
         margin-bottom: 57px;
 
         h2 {
-            color: #D97B7B;
+            color: c.$secondary-pink;
             font-size: 25px;
             font-weight: 700;
         }
@@ -41,7 +45,7 @@ footer {
     }
 
     &__contact {
-        color: white;
+        color: c.$white;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -49,7 +53,7 @@ footer {
         margin-bottom: 64px;
 
         h2 {
-            color: #D97B7B;
+            color: c.$secondary-pink;
             font-size: 25px;
             font-weight: 700;
         }
@@ -67,19 +71,19 @@ footer {
     &__links {
         text-align: center;
         margin-bottom: 40px;
-        color: white;
+        color: c.$white;
         max-width: 400px;
 
         a {
             text-decoration: none;
-            color: white;
+            color: c.$white;
         }
     }
 
     &__rights {
         text-align: center;
         font-size: 10px;
-        color: white;
+        color: c.$white;
         font-weight: 600;
     }
 
@@ -125,7 +129,7 @@ footer {
             background-position: center;
             background-size: contain;
         }
-    
+
         &__instagram-logo {
             background-image: url(../icons/Instagram.svg);
             display: block;
@@ -139,7 +143,7 @@ footer {
         &__about-us {
             display: flex;
             flex-direction: column;
-            color: white;
+            color: c.$white;
 
             h2 {
                 margin-bottom: 25px;
@@ -147,56 +151,50 @@ footer {
 
             a {
                 text-decoration: none;
-                color: white;
+                color: c.$white;
             }
         }
 
         &__extra-and-socials {
             display: flex;
             flex-direction: column;
-            color: white;
+            color: c.$white;
 
             &--extras-header {
                 margin-bottom: 25px;
-            } 
+            }
 
             a {
                 text-decoration: none;
-                color: white;
+                color: c.$white;
             }
 
             &--socials-header {
                 margin-top: 25px;
                 margin-bottom: 10px;
-            } 
+            }
 
             &--logos {
                 display: flex;
                 gap: 25px;
             }
         }
-    
+
         &__socials {
             display: none;
         }
-    
-        &__icons {
-        }
-    
+
         &__contact {
             margin-bottom: 0px;
             text-align: start;
-    
+
             h2 {
-                color: white;
+                color: c.$white;
             }
         }
-    
+
         &__links {
             display: none;
-        }
-    
-        &__rights {
         }
     }
 }

@@ -1,7 +1,7 @@
 // This scss document contains platform sizes, layouts and adjustments used througout the project
 
 // Mobile version
-$padding: 0px, 45px, 0px, 45px;
+$padding: 0px 45px;
 $gap: 20px;
 
 $heading-body-gap: 25px;
@@ -16,4 +16,4 @@ $gap-desktop: 32px;
 
 $heading-body-gap-desktop: 30px;
 $body-button-gap-desktop: 40px;
-$section-gap-desktop: 120px;
+$section-gap-desktop: 120px 0px;
