@@ -8,7 +8,11 @@
           :key="error.$uid"
           class="error-message error-message--main"
         >
-          {{ error.$message }}
+          {{
+            error.$message === "This field is required"
+              ? "Fornavn skal udfyldes"
+              : error.$message
+          }}
         </span>
       </div>
       <div class="input-column input-column--main">
@@ -90,6 +94,19 @@
         />
       </div>
     </div>
+
+    <div class="checkbox-wrapper">
+      <input type="checkbox" id="agreeCheckbox" v-model="formData.agree" />
+      <label for="agreeCheckbox"
+        >Jeg accepterer betingelserne og vilkårene for tilmelding.</label
+      >
+      <span
+        class="error-message error-message--main"
+        v-if="!formData.agree && v$.agree.$dirty"
+        >Du skal acceptere betingelserne og vilkårene.</span
+      >
+    </div>
+
     <button type="submit" class="button button--main">Tilmeld</button>
     <Modal
       :show="modalOpen"
@@ -112,7 +129,7 @@ import { reactive } from "vue";
 import { ref } from "vue";
 import BaseInput from "../components/BaseInput.vue";
 import useVuelidate from "@vuelidate/core";
-import { required } from "@vuelidate/validators";
+import { required, helpers } from "@vuelidate/validators";
 import Modal from "./SignUpModal.vue";
 
 const formData = reactive({
@@ -123,21 +140,31 @@ const formData = reactive({
   zipCode: "",
   adult: "",
   children: "",
+  agree: false,
 });
+
+const errorMessage = "Forkert indtastning";
+
 const rules = {
-  firstName: { required },
-  lastName: { required },
-  email: { required },
-  reEmail: { required },
+  firstName: {
+    required: helpers.withMessage(errorMessage, required),
+  },
+  lastName: { required: helpers.withMessage(errorMessage, required) },
+  email: { required: helpers.withMessage(errorMessage, required) },
+  reEmail: { required: helpers.withMessage(errorMessage, required) },
+  agree: { required },
 };
+
 const v$ = useVuelidate(rules, formData);
 
 const modalOpen = ref(false);
 
 const submitForm = async () => {
   const result = await v$.value.$validate();
-  if (result) {
+  if (result && formData.agree) {
     modalOpen.value = true;
+  } else {
+    v$.agree.$touch();
   }
 };
 </script>
