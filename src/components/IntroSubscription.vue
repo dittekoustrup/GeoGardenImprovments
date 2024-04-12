@@ -1,5 +1,8 @@
 <script setup>
 import { defineProps, onMounted, onUnmounted, ref } from 'vue';
+
+import isMobile from '@/helpers/isMobile.js'
+
 import ReadMoreButton from '@/components/ReadMoreButton.vue';
 import getImageUrl from '@/helpers/getImageSize';
 
@@ -12,20 +15,6 @@ const props = defineProps({
   imageName: String
 });
 
-const isMobile = ref(window.innerWidth <= 768);
-
-const handleResize = () => {
-  isMobile.value = window.innerWidth <= 768;
-  console.log(isMobile.value)
-};
-
-onMounted(() => {
-  window.addEventListener('resize', handleResize);
-});
-
-onUnmounted(() => {
-  window.removeEventListener('resize', handleResize);
-});
 </script>
 
 <template>
@@ -42,7 +31,7 @@ onUnmounted(() => {
       </div>
     </div>
 
-    <div v-show="!intro || !isMobile" class="intro__image">
+    <div v-show="!intro || !isMobile()" class="intro__image">
   <img :src="getImageUrl(imageName)" alt="membercard image">
 </div>
 
