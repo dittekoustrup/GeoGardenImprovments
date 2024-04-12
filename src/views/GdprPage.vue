@@ -5,7 +5,7 @@ import HeroBanner from "@/components/HeroBanner.vue";
 <template>
     <div>
         <div>
-            <HeroBanner height="300" imageName="gdpr_top_image.webp" />
+            <HeroBanner :height=300 imageName="gdpr_top_image.webp" />
         </div>
         <section class="content-section">
             <div class="content">
@@ -197,7 +197,7 @@ import HeroBanner from "@/components/HeroBanner.vue";
             </div>
         </section>
         <div>
-            <HeroBanner height="300" imageName="gdpr_bottom_image.webp" />
+            <HeroBanner :height=300 imageName="gdpr_bottom_image.webp" />
         </div>
     </div>
 </template>

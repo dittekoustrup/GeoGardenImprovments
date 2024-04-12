@@ -9,7 +9,7 @@ import CardComponent from '@/components/CardComponent.vue'
 <template>
   <main>
 
-    <HeroBanner height="524" imageName="Geo_Have_06.webp" />
+    <HeroBanner :height=524 imageName="Geo_Have_06.webp" />
 
     <IntroSubscription title="Velkommen til haven"
       body="Geografisk Have Kolding er en 14 hektar stor, botanisk have, hvor det geografiske relaterer sig til, at træer, buske og urter er plantet sammen efter oprindelsesland. Grundlæggeren Aksel Olsen købte jorden og startede stedet som planteskole i 1918. Han havde en stor interesse for planter fra hele verden og især fra Østasien..."
