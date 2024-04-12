@@ -1,60 +1,34 @@
+<script setup>
+import { ref, defineProps } from "vue";
+
+const props = defineProps({
+  show: {
+    type: Boolean,
+    required: true,
+  },
+});
+
+const closeModal = () => {
+  props.show = false;
+};
+</script>
+
 <template>
-  <div class="modal-overlay" v-if="show" @click="close">
-    <div class="modal">
-      <div class="modal-header">
-        <button class="close-btn" @click="close">&times;</button>
-      </div>
-      <div class="modal-content">
-        <slot></slot>
-      </div>
+  <div v-if="show" class="modal">
+    <div class="modal-content">
+      <span @click="closeModal" class="close">&times;</span>
+      <h2>Tak for din tilmelding!</h2>
+      <p>
+        Vi glæder os til at byde dig velkommen til vores grønne fællesskab og
+        forkæle dig med eksklusive tilbud, VIP-oplevelser og personlig service.
+        Hold øje med din indbakke for spændende opdateringer og særlige
+        arrangementer. Vi ser frem til at dele vores passion for planter, natur
+        og bæredygtighed med dig!
+      </p>
     </div>
   </div>
 </template>
 
-<script setup>
-import { defineProps } from "vue";
-
-const props = defineProps({
-  show: Boolean,
-  onClose: Function,
-});
-
-const close = () => {
-  props.onClose();
-};
-</script>
-
 <style scoped>
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal {
-  background-color: blue;
-  padding: 20px;
-  border-radius: 10px;
-  position: relative;
-  width: 400px;
-}
-
-.modal-header {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.close-btn {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  color: #000;
-}
+@import "../assets/style/SignUpModal.scss";
 </style>
