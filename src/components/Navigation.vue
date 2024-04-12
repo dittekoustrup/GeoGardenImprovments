@@ -1,9 +1,10 @@
 <script setup>
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import Dropdown from "./Dropdown.vue"
-import activateToast from "../helpers/Toast.js"
-import DesktopNavigation from "./DesktopNavigation.vue"
+
+import Dropdown from "./Dropdown.vue";
+import activateToast from "../helpers/Toast.js";
+import DesktopNavigation from "./DesktopNavigation.vue";
 
 const router = useRouter();
 const newsletterRoute = router.getRoutes().find(route => route.name === 'newsletter');
@@ -19,7 +20,6 @@ const redirectToHomePage = () => {
 </script>
 
 <template>
-    <nav>
         <ul class="navigation">
             <div class="navigation__logo" @click="redirectToHomePage">
                 <img src="../assets/icons/LogoTextRow.svg" alt="logo">
@@ -49,7 +49,7 @@ const redirectToHomePage = () => {
         <div v-if="dropdownOpen">
             <Dropdown />
         </div>
-    </nav>
+
 </template>
 
 <style lang="scss">
