@@ -1,14 +1,44 @@
 const blocks = [
     {
-        id: 'section', // id is mandatory
-        label: '<b>Section</b>', // You can use HTML/SVG inside labels
-        attributes: { class: 'gjs-block-section' },
-        content: `<section>
-                        <h1>This is a simple title</h1>
-                        <div>This is just a Lorem text: Lorem ipsum dolor sit amet</div>
-                    </section>`,
-    },
-
+        id: 'section-image', // id is mandatory
+        label: '<b>Section Image</b>', // You can use HTML/SVG inside labels
+        attributes: { class: 'gjs-block-custom-image' },
+        content: `
+        <table align="center" width="95%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td height="80"></td> <!-- Empty cell to create margin-top -->
+        </tr>
+        <tr>
+            <td valign="top" align="center" style="color: #ffffff;">
+                <table height="224" width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td valign="top" align="center" background="https://i.imgur.com/9Fmjp7e.png">
+                            <table align="center" border="0" cellpadding="0" cellspacing="0" style="width:100%;max-width:700px;" width="100%">
+                                <tr>
+                                    <td valign="top" align="center" style="padding: 20px; text-align: center;">
+                                        <h2 style="margin-top: 0; color: white;">Kære Spirer, tak for din tilmelding!</h2>
+                                        <div style="background-color: rgba(255, 255, 255, 0.7); padding: 20px; text-align: center;">
+                                            <p style="margin: 0; font-size: 16px; color: #ffffff;">Velkommen til Geografisk Have's Kundeklub! Som en del af vores kundeklub åbner der sig en 
+                                                verden af fordele for dig og din familie. Medlemmer af kundeklubben kan få gode rabatter i vores hyggelige café, Lykkefund, 
+                                                hvor smagsoplevelser og hyggelige stunder går hånd i hånd.</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    
+    
+    
+    
+        `
+    },    
+    
+    
     {
         id: 'text',
         label: 'Text',
@@ -24,29 +54,44 @@ const blocks = [
             <td align="center">
                 <table border="0" cellpadding="0" cellspacing="0" style="width: auto;">
                     <tr>
-                        <td height="20"></td> <!-- Empty cell to create margin-top -->
+                        <td height="48"></td> <!-- Empty cell to create margin-top -->
                     </tr>
                     <tr>
-                        <td style="text-align: center;">
-                            <a href="http://localhost:5173/gdpr" data-gjs-type="text" style="text-decoration: none; color: black;">WEBSITE</a>
+                        <td style="text-align: center; fontColor: #000000;">
+                            <a href="http://localhost:5173/gdpr" style="text-decoration: none; color: #111; font-size: 12pt;">
+                                <h3 style="margin: 0;">WEBSITE</h3>
+                            </a>
                         </td>
                         <td>&nbsp;&nbsp;&nbsp;&nbsp;</td> <!-- Non-breaking spaces for gap -->
-                        <td style="text-align: center;">
-                            <a href="http://localhost:5173/gdpr" data-gjs-type="text" style="text-decoration: none; color: black;">ÅBNINGSTIDER</a>
+                        <td style="text-align: center; fontColor: #000000;">
+                            <a href="http://localhost:5173/gdpr" style="text-decoration: none; color: #111; font-size: 12pt;">
+                                <h3 style="margin: 0;">ÅBNINGSTIDER</h3>
+                            </a>
                         </td>
                         <td>&nbsp;&nbsp;&nbsp;&nbsp;</td> <!-- Non-breaking spaces for gap -->
-                        <td style="text-align: center;">
-                            <a href="http://localhost:5173/gdpr" data-gjs-type="text" style="text-decoration: none; color: black;">EVENTS</a>
+                        <td style="text-align: center; fontColor: #000000;">
+                            <a href="http://localhost:5173/gdpr" style="text-decoration: none; color: #111; font-size: 12pt;">
+                                <h3 style="margin: 0;">EVENTS</h3>
+                            </a>
                         </td>
                         <td>&nbsp;&nbsp;&nbsp;&nbsp;</td> <!-- Non-breaking spaces for gap -->
-                        <td style="text-align: center;">
-                            <a href="http://localhost:5173/gdpr" data-gjs-type="text" style="text-decoration: none; color: black;">BLOG</a>
+                        <td style="text-align: center; fontColor: #000000;">
+                            <a href="http://localhost:5173/gdpr" style="text-decoration: none; color: #111; font-size: 12pt;">
+                                <h3 style="margin: 0;">BLOG</h3>
+                            </a>
                         </td>
                     </tr>
                 </table>
             </td>
         </tr>
     </table>
+    
+    
+    
+    
+    
+    
+    
       
         `,
     },
@@ -78,7 +123,7 @@ const blocks = [
             <td align="center">
                 <table border="0" cellpadding="0" cellspacing="0" width="100%">
                     <tr>
-                        <td height="20"></td> <!-- Empty cell to create margin-top -->
+                        <td height="70"></td> <!-- Empty cell to create margin-top -->
                     </tr>
                     <tr>
                         <td align="center">
@@ -97,13 +142,16 @@ const blocks = [
         id: 'image',
         label: 'Image',
         content: `
-                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
-                    <tr>
-                        <td align="center">
-                            <img src="https://i.imgur.com/qspKNqi.png" alt="GeoGraden logo" width="100">
-                        </td>
-                    </tr>
-                </table>`,
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td height="20"></td> <!-- Empty cell to create margin-top -->
+                </tr>
+                <tr>
+                    <td align="center">
+                        <img src="https://i.imgur.com/qspKNqi.png" alt="GeoGraden logo" width="224">
+                    </td>
+                </tr>
+            </table>`
     }
     
 ]
