@@ -5,6 +5,7 @@ import grapesjs from 'grapesjs';
 import blocks from '../helpers/NewsletterBlocks.js'
 import axios from 'axios';
 const editor = ref(null);
+const emailArray = ref(['skp2104@hotmail.com', 'ditte.j.kk1994@gmail.com', 'smoelfwastaken@gmail.com']);
 
 onMounted(() => {
     initEditor();
@@ -19,7 +20,8 @@ onBeforeUnmount(() => {
 function initEditor() {
     editor.value = grapesjs.init({
         container: editor.value,
-        height: '500px',
+        height: '85vh',
+        minHeight: '500px',
         fromElement: true,
         storeManager: false,
         // Add Grapes.js configurations here
@@ -37,25 +39,45 @@ function exportNewsletter() {
 }
 
 
+// async function sendEmail() {
+//     const emailContent = editor.value.getHtml();
+
+//     for (let i = 0; i < emailArray.value.length; i++) {
+        
+//         try {
+//             const response = await axios.post('https://sendemail-lfxkyrqqea-uc.a.run.app', {
+//                 to: emailArray.value[i],
+//                 subject: 'Test Email',
+//                 html: emailContent
+//             });
+//             console.log(response.data);
+//         } catch (error) {
+//             console.error(error);
+//         }
+        
+//     }
+
+// }
+
 
 async function sendEmail() {
     const emailContent = editor.value.getHtml();
 
-    try {
-        const response = await axios.post('https://sendemail-lfxkyrqqea-uc.a.run.app', {
-            to: 'skp2104@hotmail.com',
-            subject: 'Test Email',
-            html: emailContent
-        });
-        console.log(response.data);
-        // Handle success
-        // For example, show a success message to the user
-    } catch (error) {
-        console.error(error);
-        // Handle error
-        // For example, show an error message to the user
-    }
+        
+        try {
+            const response = await axios.post('https://sendemail-lfxkyrqqea-uc.a.run.app', {
+                to: 'ditte.j.kk1994@gmail.com',
+                subject: 'Test Email',
+                html: emailContent
+            });
+            console.log(response.data);
+        } catch (error) {
+            console.error(error);
+        }
+        
+
 }
+
 </script>
 
 <template>

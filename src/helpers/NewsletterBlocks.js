@@ -19,12 +19,35 @@ const blocks = [
         id: 'navLinks',
         label: 'Navigation Links',
         content: `
-            <div class="links-container" >
-                <a href="http://localhost:5173/gdpr" data-gjs-type="text" style="text-decoration: none; color: inherit;">WEBSITE</a>
-                <a href="http://localhost:5173/gdpr" data-gjs-type="text" style="text-decoration: none; color: inherit;">ÅBNINGSTIDER</a>
-                <a href="http://localhost:5173/gdpr" data-gjs-type="text" style="text-decoration: none; color: inherit;">EVENTS</a>
-                <a href="http://localhost:5173/gdpr" data-gjs-type="text" style="text-decoration: none; color: inherit;">BLOG</a>
-            </div>
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tr>
+            <td align="center">
+                <table border="0" cellpadding="0" cellspacing="0" style="width: auto;">
+                    <tr>
+                        <td height="20"></td> <!-- Empty cell to create margin-top -->
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">
+                            <a href="http://localhost:5173/gdpr" data-gjs-type="text" style="text-decoration: none; color: black;">WEBSITE</a>
+                        </td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td> <!-- Non-breaking spaces for gap -->
+                        <td style="text-align: center;">
+                            <a href="http://localhost:5173/gdpr" data-gjs-type="text" style="text-decoration: none; color: black;">ÅBNINGSTIDER</a>
+                        </td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td> <!-- Non-breaking spaces for gap -->
+                        <td style="text-align: center;">
+                            <a href="http://localhost:5173/gdpr" data-gjs-type="text" style="text-decoration: none; color: black;">EVENTS</a>
+                        </td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;</td> <!-- Non-breaking spaces for gap -->
+                        <td style="text-align: center;">
+                            <a href="http://localhost:5173/gdpr" data-gjs-type="text" style="text-decoration: none; color: black;">BLOG</a>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+      
         `,
     },
 
@@ -49,25 +72,40 @@ const blocks = [
     {
         id: 'devider',
         label: 'Devider',
-        content: '<hr/>',
+        content: `
+        <table align="center" border="0" cellpadding="0" cellspacing="0" width="90%">
+        <tr>
+            <td align="center">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td height="20"></td> <!-- Empty cell to create margin-top -->
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <hr style="width: 100%; margin: 0;">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    
+`,
     },
 
     {
         id: 'image',
         label: 'Image',
-        // Select the component once it's dropped
-        // select: true,
-        // You can pass components as a JSON instead of a simple HTML string,
-        // in this case we also use a defined component type `image`
-        content: {
-            type: 'image',
-            src: 'https://i.imgur.com/qspKNqi.png',
-            alt: 'GeoGraden logo',
-        },
-        // This triggers `active` event on dropped components and the `image`
-        // reacts by opening the AssetManager 
-        // activate: true,
+        content: `
+                <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                        <td align="center">
+                            <img src="https://i.imgur.com/qspKNqi.png" alt="GeoGraden logo" width="100">
+                        </td>
+                    </tr>
+                </table>`,
     }
+    
 ]
 
 export default blocks
