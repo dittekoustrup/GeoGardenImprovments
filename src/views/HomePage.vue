@@ -13,12 +13,7 @@ const routes = router.getRoutes();
 
 <template>
   <main>
-    <menu>
-      <li v-for="r in routes" :key="r.path">
-        <RouterLink :to="r.path">{{ r.meta.title }}</RouterLink>
-      </li>
-    </menu>
-
+    
     <HeroBanner imageName="Geo_Have_06.webp" />
 
     <IntroSubscription title="Velkommen til haven"
