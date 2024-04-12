@@ -29,7 +29,10 @@ const props = defineProps({
                 <p>
                     {{ body }}
                 </p>
-                <ReadMoreButton :text="buttonText" />
+                <div v-if="buttonText">
+                    <ReadMoreButton :text="buttonText" />
+                </div>
+
             </div>
         </div>
     </section>

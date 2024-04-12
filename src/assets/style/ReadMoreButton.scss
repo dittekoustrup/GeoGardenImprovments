@@ -14,6 +14,7 @@
         background-color: c.$primary-green;
         color: c.$primary-offWhite;
         border: 1px solid c.$primary-offWhite;
+        cursor: pointer;
     }
     &:active {
         background-color: c.$secondary-green;

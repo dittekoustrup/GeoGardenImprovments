@@ -1,18 +1,19 @@
 <script setup>
+import { defineProps, onMounted, onUnmounted, ref } from 'vue';
 
-import ReadMoreButton from '@/components/ReadMoreButton.vue'
+import isMobile from '@/helpers/isMobile.js'
+
+import ReadMoreButton from '@/components/ReadMoreButton.vue';
+import getImageUrl from '@/helpers/getImageSize';
 
 const props = defineProps({
   title: String,
   body: String,
   buttonText: String,
   buttonAlt: Boolean,
-  imageURL: String,
+  intro: Boolean,
+  imageName: String
 });
-
-function getImageUrl(imageURL) {
-  return new URL(`${imageURL}`, import.meta.url);
-}
 
 </script>
 
@@ -30,12 +31,13 @@ function getImageUrl(imageURL) {
       </div>
     </div>
 
-    <div class="intro__image">
-      <img :src="getImageUrl(imageURL)" alt="#">
-    </div>
+    <div v-show="!intro || !isMobile()" class="intro__image">
+  <img :src="getImageUrl(imageName)" alt="membercard image">
+</div>
+
   </section>
 </template>
 
 <style lang="scss" scoped>
-@import '../assets/style/IntroSubscription.scss'
+@import '@/assets/style/IntroSubscription.scss';
 </style>
