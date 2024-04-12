@@ -1,5 +1,6 @@
 <script setup>
-import { ref, defineProps } from "vue";
+import { ref, defineProps, defineEmits } from "vue";
+const { emit } = defineEmits();
 
 const props = defineProps({
   show: {
@@ -8,15 +9,12 @@ const props = defineProps({
   },
 });
 
-const closeModal = () => {
-  props.show = false;
-};
 </script>
 
 <template>
   <div v-if="show" class="modal">
     <div class="modal-content">
-      <span @click="closeModal" class="close">&times;</span>
+      <span  @click="$emit('update:show', false)" class="close">&times;</span>
       <h2>Tak for din tilmelding!</h2>
       <p>
         Vi glæder os til at byde dig velkommen til vores grønne fællesskab og

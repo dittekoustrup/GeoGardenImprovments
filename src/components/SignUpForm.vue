@@ -30,6 +30,10 @@ const v$ = useVuelidate(rules, formData);
 
 const modalOpen = ref(false);
 
+const updateShowModal = (value) => {
+  modalOpen.value = value;
+};
+
 const submitForm = async () => {
   const result = await v$.value.$validate();
   if (result && formData.agree) {
@@ -149,7 +153,7 @@ const submitForm = async () => {
       <button type="submit" class="button button--main">Tilmeld</button>
     </div>
   </form>
-  <SignUpModal :show="modalOpen" />
+  <SignUpModal :show="modalOpen" @update:show="updateShowModal" />
 </template>
 
 <style lang="scss" scoped>
