@@ -2,7 +2,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCZczsi1FcWr1W64qYxemQ9I4bAeu8D0AU",
+  apiKey: "AIzaSyABdOESSOT8ibJJHv6PTnUhMupApBipNlY",
   authDomain: "geo-garden.firebaseapp.com",
   projectId: "geo-garden",
   storageBucket: "geo-garden.appspot.com",
