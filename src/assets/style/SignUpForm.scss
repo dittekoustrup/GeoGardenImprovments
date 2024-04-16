@@ -1,118 +1,127 @@
 @use "./global/fonts" as f;
 @use "./global/colors" as c;
+@use "./global/mixins" as m;
 
 .form {
-  display: flex;
-  flex-direction: column;
-  margin-left: 34px;
-  margin-right: 34px;
+	display: flex;
+	flex-direction: column;
+	margin-left: 34px;
+	margin-right: 34px;
 }
 
 .input-wrapper {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .input-column {
-  margin: 0;
+	margin: 0;
 }
 
 .input {
-  max-width: 100%;
-  padding-top: 50px;
-  font-family: f.$secondary-font;
-  font-size: f.$body-text;
+	max-width: 100%;
+	padding-top: 50px;
+	font-family: f.$secondary-font;
+	font-size: f.$body-text;
 }
 
-.error-message {
-  color: red;
-  font-family: f.$secondary-font;
+::placeholder {
+	color: initial;
 }
 
-.checkbox-wrapper {
-  padding-top: 50px;
-  padding-bottom: 50px;
+.error-span {
+	margin-top: -10px;
+	color: c.$error-red;
+	font-family: f.$secondary-font;
+}
+
+.error-message ::placeholder {
+	@extend .error-span;
+	margin: 0;
 }
 
 .button-container {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 
-  .button {
-    background-color: c.$secondary-green;
-    color: c.$white;
-    padding: 10px 20px;
-    width: 306px;
-    height: 66px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: f.$secondary-font;
-    font-size: f.$button-text;
-  }
+	.button {
+  	margin-top: 50px;
+		background-color: c.$secondary-green;
+		color: c.$white;
+		padding: 10px 20px;
+		width: 306px;
+		height: 66px;
+		border: none;
+		border-radius: 5px;
+		cursor: pointer;
+    @include m.font-size-h2;
+    font-size: 18px;
+	}
 }
 .checkbox-wrapper {
-  padding-top: 50px;
-  padding-bottom: 50px;
+	padding-top: 50px;
 
-  input[type="checkbox"] {
-    appearance: none;
-    width: 33px;
-    height: 33px;
-    margin-right: 10px;
-    background-color: c.$secondary-green;
-    border-radius: 5px;
-    cursor: pointer;
-    position: relative;
-    opacity: 50%;
-    transition: background-color 0.3s ease;
+	display: flex;
 
-    &:checked {
-      background-color: c.$secondary-green;
-      &::before {
-        content: "";
-        position: absolute;
-        top: 15%;
-        left: 35%;
-        width: 10px;
-        height: 18px;
-        border: solid c.$white;
-        border-width: 0 2px 2px 0;
-        transform: rotate(45deg);
-        transition: all 0.3s ease;
-      }
-    }
-  }
-  label {
-    text-decoration: underline;
-    font-weight: 600px;
-    opacity: 50%;
-  }
+	input[type="checkbox"] {
+		appearance: none;
+		min-width: 33px;
+		height: 33px;
+		margin-right: 10px;
+		background-color: c.$secondary-green;
+		border-radius: 5px;
+		cursor: pointer;
+		position: relative;
+		opacity: 50%;
+		transition: background-color 0.3s ease;
+
+		&:checked {
+			background-color: c.$secondary-green;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 15%;
+				left: 35%;
+				width: 10px;
+				height: 18px;
+				border: solid c.$white;
+				border-width: 0 2px 2px 0;
+				transform: rotate(45deg);
+				transition: all 0.3s ease;
+			}
+		}
+	}
+	label {
+		text-decoration: underline;
+		font-weight: 600px;
+		opacity: 50%;
+	}
 }
 
 @media (min-width: 768px) {
-  .input-wrapper {
-    flex-direction: row;
-    gap: 59px;
-  }
-  .input {
-    font-size: f.$body-text-desktop;
-  }
+	.input-wrapper {
+		flex-direction: row;
+		gap: 59px;
+	}
+	.input {
+		font-size: f.$body-text-desktop;
+	}
 
-  .input-column {
-    flex: 1;
-  }
+	.input-column {
+		flex: 1;
+	}
 }
 
 @media (min-width: 1024px) {
-  .form {
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+	.form {
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 
-  .button {
-    width: 280px;
-    height: 56px;
-  }
+	.button {
+    font-size: 18px !important;
+		width: 280px;
+		height: 56px;
+	}
 }
