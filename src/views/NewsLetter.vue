@@ -3,6 +3,7 @@ import CardComponent from '@/components/CardComponent.vue';
 import MobileListCard from '@/components/MobileListCard.vue';
 import HeroBanner from '@/components/HeroBanner.vue';
 import IntroSubscription from '@/components/IntroSubscription.vue';
+import Form from "../components/SignUpForm.vue";
 
 import isMobile from '@/helpers/isMobile';
 </script>
@@ -22,6 +23,8 @@ import isMobile from '@/helpers/isMobile';
     <CardComponent title="begivenheder" category="Kommende"
       body="I Geografisk Have holder vi mange spændende events og aktiviteter hele året rundt. Herunder Grøn Have Festival, Plantemarked, Bæredygtigt Julemarked, Sankt Hans og mange flere..."
       imageName="Geo_Have_03.webp" buttonText="Læs mere" :imageFirst=false />
+      
+     <Form />
 
     <HeroBanner :height=300 imageName="gdpr_bottom_image.webp" />
 
