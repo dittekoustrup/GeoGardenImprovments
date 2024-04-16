@@ -52,6 +52,7 @@ const submitForm = async () => {
           type="text"
           label="Fornavn"
           placeholder="Fornavn"
+          class="input input--main"
         />
         <span
           v-for="error in v$.firstName.$errors"
@@ -67,6 +68,7 @@ const submitForm = async () => {
           type="text"
           label="Efternavn"
           placeholder="Efternavn"
+          class="input input--main"
         />
         <span
           v-for="error in v$.lastName.$errors"
