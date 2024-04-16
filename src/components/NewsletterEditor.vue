@@ -43,7 +43,7 @@ function exportNewsletter() {
 //     const emailContent = editor.value.getHtml();
 
 //     for (let i = 0; i < emailArray.value.length; i++) {
-        
+
 //         try {
 //             const response = await axios.post('https://sendemail-lfxkyrqqea-uc.a.run.app', {
 //                 to: emailArray.value[i],
@@ -54,7 +54,7 @@ function exportNewsletter() {
 //         } catch (error) {
 //             console.error(error);
 //         }
-        
+
 //     }
 
 // }
@@ -63,18 +63,19 @@ function exportNewsletter() {
 async function sendEmail() {
     const emailContent = editor.value.getHtml();
 
-        
-        try {
-            const response = await axios.post('https://sendemail-lfxkyrqqea-uc.a.run.app', {
-                to: 'ditte.j.kk1994@gmail.com',
-                subject: 'Test Email',
-                html: emailContent
-            });
-            console.log(response.data);
-        } catch (error) {
-            console.error(error);
-        }
-        
+
+    try {
+        const response = await axios.post('https://sendemail-lfxkyrqqea-uc.a.run.app', {
+            to: 'ditte.j.kk1994@gmail.com',
+            subject: 'Test Email',
+            html: emailContent
+        });
+        console.log(response.data);
+        alert('mail send')
+    } catch (error) {
+        console.error(error);
+    }
+
 
 }
 
