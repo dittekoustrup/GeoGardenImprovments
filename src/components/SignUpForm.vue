@@ -47,7 +47,12 @@ const submitForm = async () => {
   <form @submit.prevent="submitForm" class="form form--main">
     <div class="input-wrapper input-wrapper--main">
       <div class="input-column input-column--main">
-        <BaseInput v-model="formData.firstName" type="text" label="Fornavn" />
+        <BaseInput
+          v-model="formData.firstName"
+          type="text"
+          label="Fornavn"
+          placeholder="Fornavn"
+        />
         <span
           v-for="error in v$.firstName.$errors"
           :key="error.$uid"
@@ -57,7 +62,12 @@ const submitForm = async () => {
         </span>
       </div>
       <div class="input-column input-column--main">
-        <BaseInput v-model="formData.lastName" type="text" label="Efternavn" />
+        <BaseInput
+          v-model="formData.lastName"
+          type="text"
+          label="Efternavn"
+          placeholder="Efternavn"
+        />
         <span
           v-for="error in v$.lastName.$errors"
           :key="error.$uid"
@@ -73,6 +83,7 @@ const submitForm = async () => {
           v-model="formData.zipCode"
           type="number"
           label="Postnummer"
+          placeholder="Postnummer"
           class="input input--main"
         />
       </div>
@@ -81,6 +92,7 @@ const submitForm = async () => {
           v-model="formData.email"
           type="email"
           label="Mail"
+          placeholder="Email"
           class="input input--main"
         />
         <span
@@ -98,6 +110,7 @@ const submitForm = async () => {
           v-model="formData.reEmail"
           type="email"
           label="Gentag email"
+          placeholder="Gentag email"
           class="input input--main"
         />
         <span
@@ -113,6 +126,7 @@ const submitForm = async () => {
           v-model="formData.phone"
           type="number"
           label="Mobilnummer"
+          placeholder="Mobilnummer"
           class="input input--main"
         />
       </div>
@@ -123,6 +137,7 @@ const submitForm = async () => {
           v-model="formData.adult"
           type="text"
           label="Antal voksne i husstanden"
+          placeholder="Antal i husstanden"
           class="input input--main"
         />
       </div>
@@ -131,6 +146,7 @@ const submitForm = async () => {
           v-model="formData.children"
           type="text"
           label="Antal børn i husstanden"
+          placeholder="Antal børn i husstanden"
           class="input input--main"
         />
       </div>
