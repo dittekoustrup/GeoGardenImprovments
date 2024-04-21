@@ -116,6 +116,7 @@ const submitForm = async () => {
           v-model="formData.reEmail"
           type="email"
           label="Gentag email"
+          class="input input--main"
           :placeholder="v$.reEmail.$error ? errorMessage : 'Gentag email'"
           :class="v$.email.$error ? 'error-message' : ''"
         />
