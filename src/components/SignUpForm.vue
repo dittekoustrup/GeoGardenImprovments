@@ -36,10 +36,8 @@ const updateShowModal = (value) => {
   modalOpen.value = value;
 };
 
-// Funktion til at sende formdata til Firestore
 const sendFormDataToFirestore = async (formData) => {
   try {
-    // Tilføj en ny dokument til "userData" -samlingen
     const docRef = await addDoc(collection(db, "userData"), {
       firstName: formData.firstName,
       lastName: formData.lastName,
