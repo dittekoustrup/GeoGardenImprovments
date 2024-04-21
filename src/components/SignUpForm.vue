@@ -43,22 +43,30 @@ const sendFormDataToFirestore = async (formData) => {
       firstName: formData.firstName,
       lastName: formData.lastName,
       email: formData.email,
+      reEmail: formData.reEmail,
       zipCode: formData.zipCode,
       adult: formData.adult,
       children: formData.children,
       agree: formData.agree,
     });
     console.log("Dokument med ID:", docRef.id, "tilføjet til Firestore");
+    return { success: true };
   } catch (error) {
     console.error("Fejl ved tilføjelse af dokument:", error);
+    return { success: false, error };
   }
 };
 
 const submitForm = async () => {
   const result = await v$.value.$validate();
   if (result && formData.agree) {
-    await sendFormDataToFirestore(formData);
-    modalOpen.value = true;
+    const { success, error } = await sendFormDataToFirestore(formData);
+    if (success) {
+      modalOpen.value = true;
+    } else {
+      console.error("Fejl ved afsendelse af data til Firestore:", error);
+      modalOpen.value = false;
+    }
   } else {
     v$.agree.$touch();
   }
