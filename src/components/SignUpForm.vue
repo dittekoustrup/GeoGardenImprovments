@@ -4,6 +4,8 @@ import { required, helpers } from "@vuelidate/validators";
 import BaseInput from "./BaseInput.vue";
 import useVuelidate from "@vuelidate/core";
 import SignUpModal from "./SignUpModal.vue";
+import { db } from "../firebase";
+import { collection, addDoc } from "firebase/firestore";
 
 const formData = reactive({
   firstName: "",
@@ -35,9 +37,27 @@ const updateShowModal = (value) => {
   modalOpen.value = value;
 };
 
+const sendFormDataToFirestore = async (formData) => {
+  try {
+    const docRef = await addDoc(collection(db, "userData"), {
+      firstName: formData.firstName,
+      lastName: formData.lastName,
+      email: formData.email,
+      zipCode: formData.zipCode,
+      adult: formData.adult,
+      children: formData.children,
+      agree: formData.agree,
+    });
+    console.log("Dokument med ID:", docRef.id, "tilføjet til Firestore");
+  } catch (error) {
+    console.error("Fejl ved tilføjelse af dokument:", error);
+  }
+};
+
 const submitForm = async () => {
   const result = await v$.value.$validate();
   if (result && formData.agree) {
+    await sendFormDataToFirestore(formData);
     modalOpen.value = true;
   } else {
     v$.agree.$touch();
