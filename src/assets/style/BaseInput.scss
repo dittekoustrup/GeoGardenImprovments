@@ -1,0 +1,38 @@
+@use "./global/fonts" as f;
+@use "./global/colors" as c;
+
+.input-wrap {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid c.$black;
+  position: relative;
+
+  &__label {
+    font-size: f.$body-text;
+    font-family: f.$secondary-font;
+    color: c.$black;
+    margin-bottom: 4px;
+  }
+
+  &__input {
+    padding: 8px 0px;
+    font-size: f.$body-text;
+    font-family: f.$secondary-font;
+    border: none;
+    outline: none;
+  }
+
+  &.active .input-wrap__label {
+    display: block;
+  }
+
+  .max-width-input {
+    max-width: 558px;
+  }
+
+  @media (min-width: 768px) {
+    .max-width-input {
+      min-width: 400px;
+    }
+  }
+}

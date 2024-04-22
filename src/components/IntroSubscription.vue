@@ -1,18 +1,19 @@
 <script setup>
+import { defineProps, onMounted, onUnmounted, ref } from 'vue';
 
-import ReadMoreButton from '@/components/ReadMoreButton.vue'
+import isMobile from '@/helpers/isMobile.js'
+
+import ReadMoreButton from '@/components/ReadMoreButton.vue';
+import getImageUrl from '@/helpers/getImageSize';
 
 const props = defineProps({
   title: String,
   body: String,
   buttonText: String,
   buttonAlt: Boolean,
-  imageURL: String,
+  intro: Boolean,
+  imageName: String
 });
-
-function getImageUrl(imageURL) {
-  return new URL(`${imageURL}`, import.meta.url);
-}
 
 </script>
 
@@ -30,49 +31,13 @@ function getImageUrl(imageURL) {
       </div>
     </div>
 
-    <div class="intro__image">
-      <img :src="getImageUrl(imageURL)" alt="#">
-    </div>
+    <div v-show="!intro || !isMobile()" class="intro__image">
+  <img :src="getImageUrl(imageName)" alt="membercard image">
+</div>
+
   </section>
 </template>
 
 <style lang="scss" scoped>
-@use '../assets/style/global/mixins' as m;
-
-.intro {
-  @include m.flex-center;
-
-  &__content-flex {
-    flex: 1;
-  }
-
-  &__content-container {
-    padding: 0 100px;
-
-    h2 {
-      @include m.font-size-h2;
-    }
-
-    p {
-      @include m.font-size-body;
-    }
-  }
-
-  &__image {
-    display: none;
-
-    @include m.desktop-size {
-      display: block;
-
-      @include m.flex-center;
-      flex: 1;
-
-      & img {
-        width: 285px;
-        height: auto;
-        object-fit: cover;
-      }
-    }
-  }
-}
+@import '@/assets/style/IntroSubscription.scss';
 </style>
