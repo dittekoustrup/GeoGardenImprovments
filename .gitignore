@@ -30,4 +30,4 @@ coverage
 *.tsbuildinfo
 
 #Firebase
-Firebase/*/index.js
+firebase/*/index.js
