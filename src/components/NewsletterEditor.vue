@@ -66,7 +66,7 @@ async function sendEmail() {
 
     try {
         const response = await axios.post('https://sendemail-lfxkyrqqea-uc.a.run.app', {
-            to: 'ditte.j.kk1994@gmail.com',
+            to: 'skp2104@hotmail.com',
             subject: 'Test Email',
             html: emailContent
         });
