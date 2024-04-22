@@ -1,0 +1,28 @@
+@use '../style/global/fonts' as f;
+@use '../style/global/_variables.scss' as v;
+@use '../style/global/_colors.scss' as c;
+
+nav {
+    background-color: c.$primary-green;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 50px;
+
+    button {
+        padding: 5px 10px;
+        background: none;
+        border: 2px solid c.$primary-offWhite;
+        color: c.$primary-offWhite;
+        border-radius: 5px;
+        transition: 0.2s;
+
+        &:hover {
+            transition: 0.2s;
+            background-color: c.$primary-offWhite;
+            cursor: pointer;
+            color: c.$black;
+        }
+    }
+}
