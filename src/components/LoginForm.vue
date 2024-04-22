@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import { signIn } from '../services/authService'
+import { signIn, passwordReset } from '../services/authService'
 
 const email = ref('')
 const password = ref('')
@@ -17,6 +17,7 @@ const onSubmitForm = () => {
             <input type="password" v-model="password" placeholder="Password" />
             <button type="submit">Sign In</button>
         </form>
+        <button type="submit" @click="passwordReset(email)" >glemt kodeord</button>
     </div>
 </template>
 

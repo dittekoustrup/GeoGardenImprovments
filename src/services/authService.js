@@ -2,6 +2,7 @@ import '../firebase'
 import {
     getAuth,
     onAuthStateChanged,
+    sendPasswordResetEmail,
     signInWithEmailAndPassword,
     signOut
 } from 'firebase/auth'
@@ -31,4 +32,15 @@ export const signIn = async (email, password) => {
     } catch (e) {
         return console.log(e)
     };
+}
+
+export const passwordReset = async (email) => {
+    sendPasswordResetEmail(auth, email)
+    .then(() => {
+      alert('password reset email sent')
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
 }
