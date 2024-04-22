@@ -31,3 +31,4 @@ coverage
 
 #Firebase
 Firebase/*/index.js
+src/firebase/index.js
