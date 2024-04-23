@@ -98,8 +98,6 @@ const submitForm = async () => {
       console.error("Fejl ved afsendelse af data til Firestore:", error);
       modalOpen.value = false;
     }
-  } else {
-    v$.agree.$touch();
   }
 };
 </script>
@@ -112,7 +110,9 @@ const submitForm = async () => {
           v-model="formData.firstName"
           type="text"
           label="Fornavn"
-          :placeholder="v$.firstName.$error ? errorMessage : 'Fornavn'"
+          :placeholder="
+            v$.firstName.$error ? errorMessage : 'Udfyld dit fornavn *'
+          "
           :class="v$.firstName.$error ? 'error-message' : ''"
           class="input input--main"
         />
@@ -123,7 +123,9 @@ const submitForm = async () => {
           type="text"
           label="Efternavn"
           class="input input--main"
-          :placeholder="v$.firstName.$error ? errorMessage : 'Efternavn'"
+          :placeholder="
+            v$.lastName.$error ? errorMessage : 'Udfyld dit efternavn *'
+          "
           :class="v$.lastName.$error ? 'error-message' : ''"
         />
       </div>
@@ -131,35 +133,24 @@ const submitForm = async () => {
     <div class="input-wrapper input-wrapper--main">
       <div class="input-column input-column--main">
         <BaseInput
-          v-model="formData.zipCode"
-          type="number"
-          label="Postnummer"
-          placeholder="Postnummer"
-          class="input input--main"
-        />
-      </div>
-      <div class="input-column input-column--main">
-        <BaseInput
           v-model="formData.email"
           type="email"
-          label="Mail"
+          label="Email"
           class="input input--main"
-          :placeholder="v$.email.$error ? errorMessage : 'Email'"
+          :placeholder="v$.email.$error ? errorMessage : 'Udfyld din email *'"
           :class="v$.email.$error ? 'error-message' : ''"
         />
         <span class="error-span" v-if="emailExistsError"
           >Emailen eksisterer allerede.</span
         >
       </div>
-    </div>
-    <div class="input-wrapper input-wrapper--main">
       <div class="input-column input-column--main">
         <BaseInput
           v-model="formData.reEmail"
           type="email"
           label="Gentag email"
           class="input input--main"
-          :placeholder="v$.reEmail.$error ? errorMessage : 'Gentag email'"
+          :placeholder="v$.reEmail.$error ? errorMessage : 'Gentag din email *'"
           :class="v$.reEmail.$error ? 'error-message' : ''"
         />
         <span
@@ -173,12 +164,23 @@ const submitForm = async () => {
           Emailene skal matche.
         </span>
       </div>
+    </div>
+    <div class="input-wrapper input-wrapper--main">
       <div class="input-column input-column--main">
         <BaseInput
           v-model="formData.phone"
           type="number"
           label="Mobilnummer"
-          placeholder="Mobilnummer"
+          placeholder="Udfyld dit mobilnummer"
+          class="input input--main"
+        />
+      </div>
+      <div class="input-column input-column--main">
+        <BaseInput
+          v-model="formData.zipCode"
+          type="number"
+          label="Postnummer"
+          placeholder="Udfyld dit postnummer"
           class="input input--main"
         />
       </div>
@@ -187,7 +189,7 @@ const submitForm = async () => {
       <div class="input-column input-column--main">
         <BaseInput
           v-model="formData.adult"
-          type="text"
+          type="number"
           label="Antal voksne i husstanden"
           placeholder="Antal i husstanden"
           class="input input--main"
@@ -196,7 +198,7 @@ const submitForm = async () => {
       <div class="input-column input-column--main">
         <BaseInput
           v-model="formData.children"
-          type="text"
+          type="number"
           label="Antal børn i husstanden"
           placeholder="Antal børn i husstanden"
           class="input input--main"
