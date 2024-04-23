@@ -30,8 +30,4 @@ watchEffect(() => {
   margin: 0;
   box-sizing: border-box;
 }
-
-section {
-  gap: 120px;
-}
 </style>

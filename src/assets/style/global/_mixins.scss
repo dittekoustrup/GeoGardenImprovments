@@ -25,11 +25,11 @@
 	}
 }
 
-@mixin flex-center($justify-content: center, $align-items: center, $gap: 0) {
+@mixin flex-center($justify-content: center, $align-items: center, $gap: v.$gap) {
     display: flex;
     justify-content: $justify-content;
     align-items: $align-items;
-    gap: v.$gap;
+    gap: $gap;
     
     @include desktop-size {
 		gap: v.$gap-desktop;
