@@ -2,11 +2,25 @@
 @use "./global/colors" as c;
 @use "./global/mixins" as m;
 
+.form-heading {
+	@include m.flex-center;
+	flex-direction: column;
+	width: 800px;
+	margin: 50px auto 0 auto;
+
+	& h2 {
+		@include m.font-size-h2;
+	}
+
+	& p {
+		@include m.font-size-body;
+	}
+}
+
 .form {
 	display: flex;
 	flex-direction: column;
-	margin-left: 34px;
-	margin-right: 34px;
+	margin: 34px;
 }
 
 .input-wrapper {
