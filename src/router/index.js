@@ -61,6 +61,14 @@ const router = createRouter({
         title: "admin-login",
       },
     },
+    {
+      path: "/password-reset",
+      name: "password-reset",
+      component: () => import("../components/ResetPassword.vue"),
+      meta: {
+        title: "Glemt adgangskode?",
+      },
+    },
   ],
 });
 

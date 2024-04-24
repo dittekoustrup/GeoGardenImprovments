@@ -1,6 +1,11 @@
 <script setup>
 import { ref } from 'vue';
-import { signIn, passwordReset } from '../services/authService'
+import { signIn } from '../services/authService';
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const resetPassRoute = router.getRoutes().find(route => route.name === 'password-reset');
 
 const email = ref('')
 const password = ref('')
@@ -8,6 +13,11 @@ const password = ref('')
 const onSubmitForm = () => {
     signIn(email.value, password.value)
 }
+
+const redirectToResetPassword = () => {
+    router.push({ name: 'password-reset', query: { email: email.value } });
+}
+
 </script>
 
 <template>
@@ -16,8 +26,8 @@ const onSubmitForm = () => {
             <input type="email" v-model="email" placeholder="Email" />
             <input type="password" v-model="password" placeholder="Password" />
             <button type="submit">Sign In</button>
+            <a @click="redirectToResetPassword"> {{ resetPassRoute.meta.title }}</a>
         </form>
-        <button type="submit" @click="passwordReset(email)" >glemt kodeord</button>
     </div>
 </template>
 

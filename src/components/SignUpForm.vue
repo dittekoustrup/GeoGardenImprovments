@@ -103,6 +103,17 @@ const submitForm = async () => {
 </script>
 
 <template>
+
+  <div class="form-heading">
+    <h2>
+      Bliv en del af klubben
+    </h2>
+    <p>
+      Velkommen til Geografisk Havens kundeklub! Som medlem af vores kundeklub får du adgang til en verden af eksklusive
+      fordele.
+    </p>
+  </div>
+
   <form @submit.prevent="submitForm" class="form form--main">
     <div class="input-wrapper input-wrapper--main">
       <div class="input-column input-column--main">
@@ -132,6 +143,7 @@ const submitForm = async () => {
     </div>
     <div class="input-wrapper input-wrapper--main">
       <div class="input-column input-column--main">
+
         <BaseInput
           v-model="formData.email"
           type="email"
