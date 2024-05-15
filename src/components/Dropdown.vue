@@ -28,7 +28,7 @@ const eventRoute = router.getRoutes().find(route => route.name === 'events');
                 <p>GALLERIER</p>
                 <img src="../assets/icons/DownArrow.svg" alt="">
             </li>
-            ∑
+            
             <li>
                 <RouterLink :to="blogRoute.path">{{ blogRoute.meta.title }}</RouterLink>
             </li>

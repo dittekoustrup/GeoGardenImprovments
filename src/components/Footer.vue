@@ -30,8 +30,8 @@ import { openNewTab } from '../helpers/OpenInNewTab.js'
 
             <div class="footer-content__extra-and-socials">
                 <h2 class="footer-content__extra-and-socials--extras-header">Diverse</h2>
-                <a href="">Persondatapolitik</a>
-                <a href="">Cookiepolitik</a>
+                <a href="/gdpr">Persondatapolitik</a>
+                <a href="/gdpr">Cookiepolitik</a>
                 <a href="">Smiley kontrolrapport</a>
 
                 <h2 class="footer-content__extra-and-socials--socials-header">Social Media</h2>
