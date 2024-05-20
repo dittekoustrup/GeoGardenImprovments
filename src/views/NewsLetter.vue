@@ -10,6 +10,8 @@ import isMobile from '@/helpers/isMobile';
 
 <template>
   <div>
+    <HeroBanner :height=524 imageName="Geo_Have_06.webp" />
+    
     <IntroSubscription title="Bliv en del af klubben"
       body="Som medlem af vores kundeklub får du adgang til en verden af eksklusive fordele og særlige oplevelser i vores smukke have. Vores kundeklub er designet til at give vores trofaste gæster en ekstraordinær oplevelse, hvor I kan nyde alt det, haven har at byde på, samt få adgang til særlige rabatter og arrangementer."
       buttonText="Bliv medlem" imageName="Kundeklub_kort.webp" :buttonAlt=true />

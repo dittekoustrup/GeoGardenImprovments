@@ -18,9 +18,9 @@ const props = defineProps({
 
 .hero {
     width: 100vw;
-    height: 165px;
+    height: 165px !important;
     @include m.desktop-size{
-        height: auto;
+        height: inherit !important;
     };
 
     &__image {

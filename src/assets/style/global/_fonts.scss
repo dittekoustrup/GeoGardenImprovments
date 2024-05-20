@@ -1,27 +1,31 @@
 // This scss document contains all the fonts, their sizes and adjustments used througout the project
 
 // Import fonts from assets/style/fonts folder
-@font-face {
-	font-family: "Stag Bold";
-	src: url("./src/assets/style/fonts/Stag_Bold.ttf") format("truetype");
-}
+// @font-face {
+// 	font-family: "Stag Bold";
+// 	src: url("./src/assets/style/fonts/Stag_Bold.ttf") format("truetype");
+// }
 
-@font-face {
-	font-family: "Alfa Slab";
-	src: url("./src/assets/style/fonts/AlfaSlabOne-Regular.ttf")
-		format("truetype");
-}
+// @font-face {
+// 	font-family: "Alfa Slab";
+// 	src: url("./src/assets/style/fonts/AlfaSlabOne-Regular.ttf")
+// 		format("truetype");
+// }
 
-// TODO: add fallback font
+// // TODO: add fallback font
 
-@font-face {
-	font-family: "Open Sans Regular";
-	src: url("./src/assets/style/fonts/OpenSans_Condensed-Regular.ttf")
-		format("truetype");
-}
+// @font-face {
+// 	font-family: "Open Sans Regular";
+// 	src: url("./src/assets/style/fonts/OpenSans_Condensed-Regular.ttf")
+// 		format("truetype");
+// }
 
-$primary-font: "Alfa Slab", serif;
-$secondary-font: "Open Sans Regular", sans-serif;
+// $primary-font: "Alfa Slab", serif;
+// $secondary-font: "Open Sans Regular", sans-serif;
+
+// Fonts from google imports, local fonts didnt work when building and firebase deploying
+$primary-font: "Alfa Slab One", serif;
+$secondary-font: "Open Sans", sans-serif;
 
 $button-text: 18px;
 
