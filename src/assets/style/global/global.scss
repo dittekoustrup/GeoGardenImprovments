@@ -1,0 +1,15 @@
+@use "./mixins" as m;
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+h2 {
+	@include m.font-size-h2;
+}
+
+p {
+  @include m.font-size-body;
+}

@@ -9,12 +9,64 @@ const router = createRouter({
       name: "home",
       component: HomePage,
     },
+
+    {
+      path: "/events",
+      name: "events",
+      component: () => import("../views/OutOfScope.vue"),
+      meta: {
+        title: "EVENTS",
+      },
+    },
+
+    {
+      path: "/haveblog",
+      name: "haveblog",
+      component: () => import("../views/OutOfScope.vue"),
+      meta: {
+        title: "HAVEBLOG",
+      },
+    },
+
+    {
+      path: "/priser-åbningstider",
+      name: "priser-åbningstider",
+      component: () => import("../views/OutOfScope.vue"),
+      meta: {
+        title: "PRISER / ÅBNINGSTIDER",
+      },
+    },
+
     {
       path: "/newsletter",
       name: "newsletter",
       component: () => import("../views/NewsLetter.vue"),
       meta: {
-        title: "Newsletter",
+        title: "KUNDEKLUB",
+      },
+    },
+    {
+      path: "/gdpr",
+      name: "gdpr",
+      component: () => import("../views/GdprPage.vue"),
+      meta: {
+        title: "GDPR",
+      },
+    },
+    {
+      path: "/admin-login",
+      name: "admin-login",
+      component: () => import("../views/AdminView.vue"),
+      meta: {
+        title: "admin-login",
+      },
+    },
+    {
+      path: "/password-reset",
+      name: "password-reset",
+      component: () => import("../components/ResetPassword.vue"),
+      meta: {
+        title: "Glemt adgangskode?",
       },
     },
   ],

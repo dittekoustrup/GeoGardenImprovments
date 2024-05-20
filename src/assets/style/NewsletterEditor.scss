@@ -1,0 +1,21 @@
+@use "./global/colors" as c;
+@use "./global/variables" as v;
+@use "./global/fonts" as f;
+
+.gjs-blocks-c {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+.gjs-block {
+    width: auto;
+    height: auto;
+    min-height: auto;
+    margin: 0px;
+
+    &:hover {
+        color: rgb(255, 196, 0);
+    }
+}
+

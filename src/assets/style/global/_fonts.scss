@@ -1,0 +1,41 @@
+// This scss document contains all the fonts, their sizes and adjustments used througout the project
+
+// Import fonts from assets/style/fonts folder
+@font-face {
+	font-family: "Stag Bold";
+	src: url("./src/assets/style/fonts/Stag_Bold.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Alfa Slab";
+	src: url("./src/assets/style/fonts/AlfaSlabOne-Regular.ttf")
+		format("truetype");
+}
+
+// TODO: add fallback font
+
+@font-face {
+	font-family: "Open Sans Regular";
+	src: url("./src/assets/style/fonts/OpenSans_Condensed-Regular.ttf")
+		format("truetype");
+}
+
+$primary-font: "Alfa Slab", serif;
+$secondary-font: "Open Sans Regular", sans-serif;
+
+$button-text: 18px;
+
+$line-height: 70px;
+$line-height-body: 28px;
+
+$letter: 0.75%;
+
+// Mobil version
+$h1: 35px;
+$h2: 30px;
+$body-text: 14px;
+
+// Desktop version
+$h1-desktop: 50px;
+$h2-desktop: 45px;
+$body-text-desktop: 16px;

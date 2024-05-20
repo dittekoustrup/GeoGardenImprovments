@@ -11,10 +11,19 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "axios": "^1.6.8",
+    "grapesjs": "^0.21.10",
+    "grapesjs-mjml": "^1.0.5",
+    "mjml": "^4.15.3",
+    "nodemailer": "^6.9.13",
+    "@vuelidate/core": "^2.0.3",
+    "@vuelidate/validators": "^2.0.4",
+    "firebase": "^10.11.0",
     "pinia": "^2.1.7",
     "sass": "^1.72.0",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "vue-toast-notification": "^3.1.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",

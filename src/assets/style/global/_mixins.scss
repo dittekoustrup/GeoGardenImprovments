@@ -1,0 +1,50 @@
+@use "./variables" as v;
+@use "./fonts" as f;
+
+@mixin desktop-size {
+	@media (min-width: v.$desktop-screen) {
+		@content;
+	}
+}
+
+@mixin font-size-h2 {
+	font-size: f.$h2;
+	font-family: f.$primary-font;
+
+	@include desktop-size {
+		font-size: f.$h2-desktop;
+	}
+}
+
+@mixin font-size-h1 {
+	font-size: f.$h1;
+	font-family: f.$primary-font;
+
+	@include desktop-size {
+		font-size: f.$h1-desktop;
+	}
+}
+
+@mixin font-size-body {
+	font-size: f.$body-text;
+	font-family: f.$secondary-font;
+
+	@include desktop-size {
+		font-size: f.$body-text-desktop;
+	}
+}
+
+@mixin flex-center(
+	$justify-content: center,
+	$align-items: center,
+	$gap: v.$gap
+) {
+	display: flex;
+	justify-content: $justify-content;
+	align-items: $align-items;
+	gap: $gap;
+
+	@include desktop-size {
+		gap: v.$gap-desktop;
+	}
+}
