@@ -56,10 +56,10 @@ import { openNewTab } from '../helpers/OpenInNewTab.js'
                     <li>info@geografiskhave.dk</li>
                 </ul>
 
-                <dl>
-                    <dt>CVR-NR.: 36675802</dt>
-                    <dt>EAN-NR.: 5798005311607</dt>
-                </dl>
+                <ul>
+                    <li>CVR-NR.: 36675802</li>
+                    <li>EAN-NR.: 5798005311607</li>
+                </ul>
             </div>
 
             <div class="footer-content__links">

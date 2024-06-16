@@ -22,11 +22,11 @@
     }
 
 	&--alt {
-		background-color: c.$secondary-green;
+		background-color: c.$primary-green;
 		color: c.$primary-offWhite;
 
         &:hover {
-            background-color: c.$primary-green;
+            background-color: c.$secondary-green;
         }
         &:active {
             background-color: c.$primary-offWhite;
