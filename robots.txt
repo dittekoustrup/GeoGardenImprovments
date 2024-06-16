@@ -1,0 +1,4 @@
+User-agent: *  # This line applies the following rules to all search engine bots
+
+# Allow all pages to be crawled
+Allow: /

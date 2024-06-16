@@ -9,6 +9,9 @@ import isMobile from '@/helpers/isMobile';
 </script>
 
 <template>
+  <head>
+    <meta name="description" content="Discover exclusive offers, upcoming events, and exciting news from Geografisk Have. Join our newsletter to unlock a world of benefits and experiences in our beautiful garden!" />
+  </head>
   <div>
     <HeroBanner :height=524 imageName="Geo_Have_06.webp" />
     

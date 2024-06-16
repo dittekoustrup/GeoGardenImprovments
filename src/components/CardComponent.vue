@@ -4,7 +4,7 @@ import ReadMoreButton from '@/components/ReadMoreButton.vue';
 
 import getImageUrl from '@/helpers/getImageSize';
 
-const props = defineProps({
+defineProps({
     title: String,
     category: String,
     body: String,
