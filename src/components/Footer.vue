@@ -10,9 +10,9 @@ import { openNewTab } from '../helpers/OpenInNewTab.js'
             <div class="footer-content__socials">
                 <h2>Social Media</h2>
                 <div class="footer-content__icons">
-                    <img src="../assets/icons/Facebook.svg" alt="Facebook logo"
+                    <img width="60px" height="60px" src="../assets/icons/Facebook.svg" alt="Facebook logo"
                         @click="openNewTab('https://www.facebook.com/geografiskhave/')">
-                    <img src="../assets/icons/Instagram.svg" alt="Instagram logo"
+                    <img width="60px" height="60px" src="../assets/icons/Instagram.svg" alt="Instagram logo"
                         @click="openNewTab('https://www.instagram.com/geografisk_have/')">
                 </div>
             </div>

@@ -22,7 +22,7 @@ const redirectToHomePage = () => {
 <template>
         <nav class="navigation">
             <div class="navigation__logo" @click="redirectToHomePage">
-                <img src="../assets/icons/LogoTextRow.svg" alt="logo">
+                <img width="50px" height="200px" src="../assets/icons/LogoTextRow.svg" alt="logo">
             </div>
 
             <DesktopNavigation />
@@ -33,16 +33,16 @@ const redirectToHomePage = () => {
             </li>
 
             <li class="navigation__search" @click="activateToast">
-                <img src="../assets/icons/Search.svg" alt="search icon">
+                <img width="25px" height="25px" src="../assets/icons/Search.svg" alt="search icon">
             </li>
 
             <li class="navigation__burger" @click="toggleDropdown">
                 <div v-if="!dropdownOpen">
-                    <img src="../assets/icons/Burger.svg" alt="Burger icon">
+                    <img width="25px" height="25px" src="../assets/icons/Burger.svg" alt="Burger icon">
                 </div>
 
                 <div v-if="dropdownOpen" class="navigation__cross">
-                    <img src="../assets/icons/Cross.svg" alt="Close icon">
+                    <img width="25px" height="25px" src="../assets/icons/Cross.svg" alt="Close icon">
                 </div>
             </li>
           </ul>
