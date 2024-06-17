@@ -33,7 +33,7 @@ const router = createRouter({
       name: "priser-åbningstider",
       component: () => import("../views/OutOfScope.vue"),
       meta: {
-        title: "PRISER / ÅBNINGSTIDER",
+        title: "PRISER/ÅBNINGSTIDER",
       },
     },
 

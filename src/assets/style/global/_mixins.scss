@@ -7,6 +7,12 @@
 	}
 }
 
+@mixin nav-desktop-size {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
+
 @mixin font-size-h2 {
 	font-size: f.$h2;
 	font-family: f.$primary-font;
