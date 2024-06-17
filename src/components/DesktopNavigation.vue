@@ -29,8 +29,7 @@ const hideAllDropdowns = () => {
 </script>
 
 <template>
-    <div class="navigation__desktop-layout">
-
+    <menu class="navigation__desktop-layout">
         <li class="navigation__dropdown-menu" @mouseenter="showDropdown(0)" @click="hideDropdown(0)">
             <p>OPLEVHAVEN</p>
             <img :class="{ 'rotate-180': dropdownVisibility[0] }" src="../assets/icons/DownArrowWhite.svg" alt="down arrow">
@@ -60,5 +59,5 @@ const hideAllDropdowns = () => {
         <li @click="hideAllDropdowns()">
             <RouterLink :to="eventRoute.path">{{ eventRoute.meta.title }}</RouterLink>
         </li>
-    </div>
+    </menu>
 </template>

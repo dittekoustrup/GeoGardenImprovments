@@ -72,6 +72,11 @@
 		cursor: pointer;
 	}
 
+	&__menu {
+		display: flex;
+		flex-direction: row;
+	}
+
 	ul {
 		padding: 0;
 	}

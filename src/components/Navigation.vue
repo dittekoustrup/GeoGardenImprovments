@@ -20,13 +20,14 @@ const redirectToHomePage = () => {
 </script>
 
 <template>
-        <ul class="navigation">
+        <nav class="navigation">
             <div class="navigation__logo" @click="redirectToHomePage">
                 <img src="../assets/icons/LogoTextRow.svg" alt="logo">
             </div>
 
             <DesktopNavigation />
 
+            <ul class="navigation__menu">
             <li class="navigation__newsletter">
                 <RouterLink :to="newsletterRoute.path">{{ newsletterRoute.meta.title }}</RouterLink>
             </li>
@@ -44,7 +45,8 @@ const redirectToHomePage = () => {
                     <img src="../assets/icons/Cross.svg" alt="Close icon">
                 </div>
             </li>
-        </ul>
+          </ul>
+        </nav>
 
         <div v-if="dropdownOpen">
             <Dropdown />
