@@ -1,6 +1,16 @@
 // This scss document contains all the fonts, their sizes and adjustments used througout the project
 
 // Fonts from google imports, local fonts didnt work when building and firebase deploying
+@font-face {
+    font-family: "PT Serif-Bold";
+    src: url("../fonts/PTSerif-Bold.ttf") format("truetype");
+  };
+
+  @font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/OpenSans_Condensed-Regular.ttf") format("truetype");
+  };
+
 $primary-font: "PT Serif", serif;
 $secondary-font: "Open Sans", sans-serif;
 

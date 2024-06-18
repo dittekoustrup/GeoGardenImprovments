@@ -18,7 +18,7 @@ const props = defineProps({
 
 .hero {
     width: 100vw;
-    height: 165px !important;
+    // height: 165px !important;
     @include m.desktop-size{
         height: inherit !important;
     };
