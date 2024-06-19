@@ -13,7 +13,7 @@ import isMobile from '@/helpers/isMobile';
     <meta name="description" content="Discover exclusive offers, upcoming events, and exciting news from Geografisk Have. Join our newsletter to unlock a world of benefits and experiences in our beautiful garden!" />
   </head>
   <div>
-    <HeroBanner :height=524 imageName="Geo_Have_06.webp" />
+    <HeroBanner imageName="Geo_Have_06.webp" />
     
     <IntroSubscription title="Bliv en del af klubben"
       body="Som medlem af vores kundeklub får du adgang til en verden af eksklusive fordele og særlige oplevelser i vores smukke have. Vores kundeklub er designet til at give vores trofaste gæster en ekstraordinær oplevelse, hvor I kan nyde alt det, haven har at byde på, samt få adgang til særlige rabatter og arrangementer."
@@ -31,7 +31,6 @@ import isMobile from '@/helpers/isMobile';
       
      <Form />
 
-    <HeroBanner :height=300 imageName="gdpr_bottom_image.webp" />
-
+    <HeroBanner imageName="gdpr_bottom_image.webp" />
   </div>
 </template>

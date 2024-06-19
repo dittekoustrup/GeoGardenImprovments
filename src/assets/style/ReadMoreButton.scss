@@ -1,5 +1,6 @@
 @use "./global/mixins" as m;
 @use "./global/colors" as c;
+@use "./global/fonts" as f;
 
 .button {
 	@include m.flex-center;
@@ -9,6 +10,7 @@
 	color: c.$primary-brown;
 	width: 306px;
 	height: 64px;
+    font-family: f.$secondary-font;
 
     &:hover {
         background-color: c.$primary-green;

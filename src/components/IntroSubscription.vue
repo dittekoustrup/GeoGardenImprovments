@@ -32,12 +32,12 @@ const props = defineProps({
     </div>
 
     <div v-show="!intro || !isMobile()" class="intro__image">
-  <img width="500px" height="500px" :src="getImageUrl(imageName)" alt="membercard image">
+  <img width="350px" height="350px" :src="getImageUrl(imageName)" alt="membercard image">
 </div>
 
   </section>
 </template>
 
 <style lang="scss" scoped>
-@import '@/assets/style/IntroSubscription.scss';
+@import '../assets/style/IntroSubscription.scss';
 </style>

@@ -35,5 +35,5 @@ import getImageUrl from '@/helpers/getImageSize';
 </template>
 
 <style lang="scss" scoped>
-@import '@/assets/style/MobileListCard.scss';
+@import '../assets/style/MobileListCard.scss';
 </style>

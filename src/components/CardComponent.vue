@@ -39,5 +39,5 @@ defineProps({
 </template>
 
 <style lang="scss" scoped>
-@import '@/assets/style/CardComponent';
+@import '../assets/style/CardComponent.scss';
 </style>
