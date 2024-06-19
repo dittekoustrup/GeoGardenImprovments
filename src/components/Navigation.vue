@@ -22,7 +22,7 @@ const redirectToHomePage = () => {
 <template>
         <nav class="navigation">
             <div class="navigation__logo" @click="redirectToHomePage">
-                <img width="50px" height="200px" src="../assets/icons/LogoTextRow.svg" alt="logo">
+                <img width="560px" height="134px" src="../assets/icons/LogoTextRow.svg" alt="logo">
             </div>
 
             <DesktopNavigation />

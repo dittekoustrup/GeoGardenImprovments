@@ -12,7 +12,7 @@ import isMobile from '@/helpers/isMobile';
   <head>
     <meta name="description" content="Discover exclusive offers, upcoming events, and exciting news from Geografisk Have. Join our newsletter to unlock a world of benefits and experiences in our beautiful garden!" />
   </head>
-  <div>
+  <main>
     <HeroBanner imageName="Geo_Have_06.webp" />
     
     <IntroSubscription title="Bliv en del af klubben"
@@ -32,5 +32,5 @@ import isMobile from '@/helpers/isMobile';
      <Form />
 
     <HeroBanner imageName="gdpr_bottom_image.webp" />
-  </div>
+  </main>
 </template>

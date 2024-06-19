@@ -24,8 +24,8 @@ const props = defineProps({
     };
 
     &__image {
+        aspect-ratio: 560/134;
         width: 100%;
-        height: 100%;
         object-fit: cover;
     }
 }
