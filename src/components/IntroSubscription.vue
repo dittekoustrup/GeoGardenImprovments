@@ -32,7 +32,7 @@ const props = defineProps({
     </div>
 
     <div v-show="!intro || !isMobile()" class="intro__image">
-  <img width="350px" height="350px" :src="getImageUrl(imageName)" alt="membercard image">
+  <img height="350px" :src="getImageUrl(imageName)" alt="membercard image">
 </div>
 
   </section>

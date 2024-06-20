@@ -40,11 +40,11 @@ const hideAllDropdowns = () => {
             <RouterLink :to="pricesRoute.path">{{ pricesRoute.meta.title }}</RouterLink>
         </li>
 
-        <li class="navigation__dropdown-menu" @mouseenter="showDropdown(1)" @click="hideDropdown(1)">
+        <!-- <li class="navigation__dropdown-menu" @mouseenter="showDropdown(1)" @click="hideDropdown(1)">
             <p>BOOKING</p>
             <img :class="{ 'rotate-180': dropdownVisibility[1] }" src="../assets/icons/DownArrowWhite.svg" alt="down arrow">
             <DesktopDropdown v-if="dropdownVisibility[1]" @mouseleave="hideDropdown(1)" />
-        </li>
+        </li> -->
 
         <li class="navigation__dropdown-menu" @mouseenter="showDropdown(2)" @click="hideDropdown(2)">
             <p>GALLERIER</p>
